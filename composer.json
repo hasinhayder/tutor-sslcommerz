@@ -1,0 +1,22 @@
+{
+    "version": "1.0.3",
+    "name": "hasinhayder/tutor-sslcommerz",
+    "description": "SSLCommerz payment gateway integration for Tutor LMS",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Hasin Hayder",
+            "email": "hasin@hasin.me",
+            "homepage": "https://github.com/hasinhayder",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/hasinhayder/tutor-sslcommerz",
+    "autoload": {
+        "psr-4": {
+            "Payments\\Sslcommerz\\": "payments/",
+            "TutorSslcommerz\\": "integration/"
+        }
+    }
+}
