@@ -94,7 +94,7 @@ class SslcommerzConfig extends BaseConfig implements ConfigContract {
 		$settings = Settings::get_payment_gateway_settings('sslcommerz');
 
 		if (!is_array($settings)) {
-			throw new \RuntimeException('Unable to load SSLCommerz gateway settings');
+			throw new \RuntimeException(__('Unable to load SSLCommerz gateway settings', 'tutor-sslcommerz'));
 		}
 
 		$config_keys = array_keys(self::CONFIG_KEYS);

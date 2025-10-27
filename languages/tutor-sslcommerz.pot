@@ -1,0 +1,134 @@
+# Copyright (C) 2025 Hasin Hayder
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tutor SSLCommerz Payment Gateway 1.0.3\n"
+"Report-Msgid-Bugs-To: https://github.com/hasinhayder/tutor-sslcommerz/issues\n"
+"POT-Creation-Date: 2025-01-27 10:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: integration/Init.php:67
+msgid "SSLCommerz"
+msgstr ""
+
+#: integration/Init.php:72
+msgid "Environment"
+msgstr ""
+
+#: integration/Init.php:74
+msgid "Sandbox"
+msgstr ""
+
+#: integration/Init.php:75
+msgid "Live"
+msgstr ""
+
+#: integration/Init.php:81
+msgid "Store ID"
+msgstr ""
+
+#: integration/Init.php:84
+msgid "Your SSLCommerz Store ID. For sandbox, register at https://developer.sslcommerz.com/registration/"
+msgstr ""
+
+#: integration/Init.php:87
+msgid "Store Password"
+msgstr ""
+
+#: integration/Init.php:90
+msgid "Your SSLCommerz Store Password (NOT your merchant panel password)"
+msgstr ""
+
+#: integration/Init.php:93
+msgid "IPN URL"
+msgstr ""
+
+#: integration/Init.php:96
+msgid "Copy this URL and add it to your SSLCommerz merchant panel as IPN URL"
+msgstr ""
+
+#: integration/SslcommerzConfig.php:87
+msgid "Unable to load SSLCommerz gateway settings"
+msgstr ""
+
+#: payments/Sslcommerz.php:108
+msgid "Order ID is required for payment processing"
+msgstr ""
+
+#: payments/Sslcommerz.php:112
+msgid "Currency information is required for payment processing"
+msgstr ""
+
+#: payments/Sslcommerz.php:116
+msgid "Customer email is required for payment processing"
+msgstr ""
+
+#: payments/Sslcommerz.php:125
+msgid "Payment amount must be greater than zero"
+msgstr ""
+
+#: payments/Sslcommerz.php:137
+msgid "Course Purchase"
+msgstr ""
+
+#: payments/Sslcommerz.php:145
+msgid "Customer"
+msgstr ""
+
+#: payments/Sslcommerz.php:146
+msgid "N/A"
+msgstr ""
+
+#: payments/Sslcommerz.php:158
+msgid "Tutor LMS"
+msgstr ""
+
+#: payments/Sslcommerz.php:200
+msgid "Gateway URL not found in response"
+msgstr ""
+
+#: payments/Sslcommerz.php:203
+msgid "Unknown error occurred"
+msgstr ""
+
+#: payments/Sslcommerz.php:205
+msgid "SSLCommerz Payment Failed: "
+msgstr ""
+
+#: payments/Sslcommerz.php:230
+msgid "Failed to connect with SSLCommerz API: "
+msgstr ""
+
+#: payments/Sslcommerz.php:237
+msgid "Invalid JSON response from SSLCommerz API"
+msgstr ""
+
+#: payments/Sslcommerz.php:241
+msgid "Failed to connect with SSLCommerz API (HTTP "
+msgstr ""
+
+#: payments/Sslcommerz.php:280
+msgid "No transaction data received. IPN endpoint should only receive POST requests from SSLCommerz."
+msgstr ""
+
+#: payments/Sslcommerz.php:285
+msgid "Invalid transaction data: Missing transaction ID or status."
+msgstr ""
+
+#: payments/Sslcommerz.php:304
+msgid "Payment failed"
+msgstr ""
+
+#: payments/Sslcommerz.php:318
+msgid "Transaction validation with SSLCommerz API failed."
+msgstr ""
+
+#: payments/Sslcommerz.php:329
+msgid "Error processing payment: "
+msgstr ""

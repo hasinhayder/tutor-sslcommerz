@@ -86,7 +86,6 @@ final class Tutor_SSLCommerz_Plugin {
 		define('TUTOR_SSLCOMMERZ_VERSION', '1.0.3');
 		define('TUTOR_SSLCOMMERZ_URL', plugin_dir_url(__FILE__));
 		define('TUTOR_SSLCOMMERZ_PATH', plugin_dir_path(__FILE__));
-		define('TUTOR_SSLCOMMERZ_PAYMENTS_DIR', trailingslashit(TUTOR_SSLCOMMERZ_PATH . 'src/Payments'));
 	}
 
 	/**
@@ -95,7 +94,21 @@ final class Tutor_SSLCommerz_Plugin {
 	 * @since 1.0.0
 	 */
 	private function init_hooks(): void {
+		add_action('plugins_loaded', [$this, 'load_textdomain'], 1);
 		add_action('plugins_loaded', [$this, 'init_gateway'], 100);
+	}
+
+	/**
+	 * Load plugin text domain for internationalization
+	 *
+	 * @since 1.0.0
+	 */
+	public function load_textdomain(): void {
+		load_plugin_textdomain(
+			'tutor-sslcommerz',
+			false,
+			TUTOR_SSLCOMMERZ_PATH . 'languages/'
+		);
 	}
 
 	/**

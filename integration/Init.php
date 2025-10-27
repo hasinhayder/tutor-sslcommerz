@@ -97,7 +97,7 @@ final class Init {
     public function add_tutor_sslcommerz_payment_method(array $methods): array {
         $sslcommerz_payment_method = [
             'name' => 'sslcommerz',
-            'label' => 'SSLCommerz',
+            'label' => __('SSLCommerz', 'tutor-sslcommerz'),
             'is_installed' => true,
             'is_active' => true,
             'icon' => TUTOR_SSLCOMMERZ_URL . 'assets/sslcommerz-logo.png',
@@ -106,33 +106,33 @@ final class Init {
                     [
                         'name' => 'environment',
                         'type' => 'select',
-                        'label' => 'Environment',
+                        'label' => __('Environment', 'tutor-sslcommerz'),
                         'options' => [
-                            'sandbox' => 'Sandbox',
-                            'live' => 'Live',
+                            'sandbox' => __('Sandbox', 'tutor-sslcommerz'),
+                            'live' => __('Live', 'tutor-sslcommerz'),
                         ],
                         'value' => 'sandbox',
                     ],
                     [
                         'name' => 'store_id',
                         'type' => 'text',
-                        'label' => 'Store ID',
+                        'label' => __('Store ID', 'tutor-sslcommerz'),
                         'value' => '',
-                        'desc' => 'Your SSLCommerz Store ID. For sandbox, register at https://developer.sslcommerz.com/registration/',
+                        'desc' => __('Your SSLCommerz Store ID. For sandbox, register at https://developer.sslcommerz.com/registration/', 'tutor-sslcommerz'),
                     ],
                     [
                         'name' => 'store_password',
                         'type' => 'secret_key',
-                        'label' => 'Store Password',
+                        'label' => __('Store Password', 'tutor-sslcommerz'),
                         'value' => '',
-                        'desc' => 'Your SSLCommerz Store Password (NOT your merchant panel password)',
+                        'desc' => __('Your SSLCommerz Store Password (NOT your merchant panel password)', 'tutor-sslcommerz'),
                     ],
                     [
                         'name' => 'webhook_url',
                         'type' => 'webhook_url',
-                        'label' => 'IPN URL',
+                        'label' => __('IPN URL', 'tutor-sslcommerz'),
                         'value' => '',
-                        'desc' => 'Copy this URL and add it to your SSLCommerz merchant panel as IPN URL',
+                        'desc' => __('Copy this URL and add it to your SSLCommerz merchant panel as IPN URL', 'tutor-sslcommerz'),
                     ],
                 ],
         ];
