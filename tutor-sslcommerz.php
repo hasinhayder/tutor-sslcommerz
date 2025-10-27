@@ -83,7 +83,7 @@ final class Tutor_SSLCommerz_Plugin {
 	 * @since 1.0.0
 	 */
 	private function define_constants(): void {
-		define('TUTOR_SSLCOMMERZ_VERSION', '1.0.3');
+		define('TUTOR_SSLCOMMERZ_VERSION', '1.0.6');
 		define('TUTOR_SSLCOMMERZ_URL', plugin_dir_url(__FILE__));
 		define('TUTOR_SSLCOMMERZ_PATH', plugin_dir_path(__FILE__));
 	}
