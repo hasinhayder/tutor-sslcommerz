@@ -147,18 +147,18 @@ SSLCommerz supports the following currencies:
 
 ```
 tutor-sslcommerz/
-├── tutor-sslcommerz.php          # Main plugin file
+├── tutor-sslcommerz.php           # Main plugin file
 ├── composer.json                  # Autoload configuration
 ├── readme.txt                     # WordPress plugin readme
 ├── README.md                      # This file
 ├── assets/                        # Plugin assets
-│   └── sslcommerz-logo.png       # Gateway logo (add your own)
+│   └── sslcommerz-logo.png        # Gateway logo (add your own)
 ├── integration/                   # Tutor LMS integration
-│   ├── Init.php                  # Plugin initialization
-│   ├── SslcommerzConfig.php      # Configuration class
-│   └── SslcommerzGateway.php     # Gateway registration
+│   ├── Init.php                   # Plugin initialization
+│   ├── SslcommerzConfig.php       # Configuration class
+│   └── SslcommerzGateway.php      # Gateway registration
 ├── payments/                      # Payment processing
-│   └── Sslcommerz.php            # Core payment logic
+│   └── Sslcommerz.php             # Core payment logic
 └── vendor/                        # Composer autoload
 ```
 
@@ -191,25 +191,6 @@ tutor-sslcommerz/
 2. **Currency Conversion**: Non-BDT transactions are auto-converted to BDT
 3. **Refunds**: Manual refund processing through SSLCommerz merchant panel required
 
-## Developer Notes
-
-### Hooks and Filters
-
-The plugin uses standard Tutor LMS payment gateway hooks:
-- `tutor_gateways_with_class` - Register gateway
-- `tutor_payment_gateways_with_class` - Add gateway to list
-- `tutor_payment_gateways` - Add settings fields
-
-### Extending the Plugin
-
-You can extend functionality by:
-1. Adding custom validation in `verifyAndCreateOrderData()`
-2. Modifying payment data in `prepareData()`
-3. Adding custom fields in `Init.php` settings
-
-### Database
-
-No additional database tables required. Uses Tutor LMS standard order tables.
 
 ## Support
 
@@ -227,17 +208,6 @@ This plugin is licensed under GPLv2 or later.
 - Developed for Tutor LMS
 - SSLCommerz API integration
 - Based on Tutor LMS Payment Gateway framework
-
-## Changelog
-
-### 1.0.0 (2025-01-01)
-- Initial release
-- One-time payment support
-- Sandbox and Live environment
-- IPN integration
-- Hash validation
-- Multi-currency support
-- Transaction validation
 
 ## Additional Resources
 

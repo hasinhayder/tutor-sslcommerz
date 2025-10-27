@@ -126,6 +126,12 @@ Refunds must be processed manually through the SSLCommerz merchant panel. The pl
 
 == Changelog ==
 
+= 1.0.5 =
+Minor Fixes
+
+= 1.0.4 =
+Minor Fixes
+
 = 1.0.3 =
 * Improvement: Replaced cURL with WordPress HTTP API for better compatibility
 * Improvement: Enhanced error handling and JSON validation
@@ -151,11 +157,17 @@ Refunds must be processed manually through the SSLCommerz merchant panel. The pl
 
 == Upgrade Notice ==
 
+= 1.0.5 =
+Minor Fixes
+
+= 1.0.4 =
+Minor Fixes
+
 = 1.0.3 =
 Replaces cURL with WordPress HTTP API for improved security and compatibility.
 
 = 1.0.2 =
-Critical security fixes for IPN endpoint. Update immediately.
+Fixes for IPN endpoint. Update immediately.
 
 = 1.0.1 =
 Fixes payment amount issue. Required for payments to work.
