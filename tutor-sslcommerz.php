@@ -3,7 +3,7 @@
  * Plugin Name:     Tutor SSLCommerz
  * Plugin URI:      https://github.com/hasinhayder/tutor-sslcommerz
  * Description:     SSLCommerz payment gateway integration for Tutor LMS (Free & Pro). Accept online payments directly within your Tutor LMS-powered site.
- * Version:         1.0.5
+ * Version:         1.0.6
  * Author:          Hasin Hayder
  * Author URI:      https://github.com/hasinhayder
  * License:         GPLv2 or later
