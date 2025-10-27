@@ -27,7 +27,7 @@ SSLCommerz payment gateway integration for Tutor LMS. This plugin enables one-ti
 
 ## Installation
 
-1. Upload the plugin folder to `/wp-content/plugins/tutor-sslcommerz`
+1. Upload the plugin folder to `/wp-content/plugins`
 2. Activate the plugin through WordPress admin
 3. Ensure Tutor LMS is activated
 4. Configure settings in Tutor LMS > Settings > Payments

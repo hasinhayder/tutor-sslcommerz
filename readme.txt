@@ -50,7 +50,7 @@ Tutor SSLCommerz Payment Gateway integrates SSLCommerz, Bangladesh's leading pay
 
 == Installation ==
 
-1. Upload the plugin folder to `/wp-content/plugins/tutor-sslcommerz`
+1. Upload the plugin folder to `/wp-content/plugins`
 2. Activate the plugin through the WordPress admin
 3. Ensure Tutor LMS is installed and activated
 4. Go to **Tutor LMS > Settings > Payments**
