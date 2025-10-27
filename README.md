@@ -15,6 +15,8 @@ SSLCommerz payment gateway integration for Tutor LMS. This plugin enables one-ti
 - ✅ Secure payment processing with hash validation
 - ✅ Transaction validation through SSLCommerz API
 - ✅ Support for all SSLCommerz payment methods (Cards, Mobile Banking, Internet Banking)
+- ✅ Internationalization (i18n) support for translations
+- ✅ WordPress HTTP API for secure external communications
 
 ## Requirements
 
@@ -157,10 +159,35 @@ tutor-sslcommerz/
 │   ├── Init.php                   # Plugin initialization
 │   ├── SslcommerzConfig.php       # Configuration class
 │   └── SslcommerzGateway.php      # Gateway registration
+├── languages/                     # Translation files
+│   └── tutor-sslcommerz.pot       # Translation template
 ├── payments/                      # Payment processing
 │   └── Sslcommerz.php             # Core payment logic
 └── vendor/                        # Composer autoload
 ```
+
+## Internationalization (i18n)
+
+This plugin supports internationalization and is translation-ready. All user-facing strings are wrapped with WordPress translation functions.
+
+### For Translators
+
+1. Use the `languages/tutor-sslcommerz.pot` file as a template
+2. Create language-specific `.po` files using tools like Poedit or Loco Translate
+3. Compile `.mo` files and place them in the `languages/` directory
+4. File naming: `tutor-sslcommerz-{locale}.mo` (e.g., `tutor-sslcommerz-bn_BD.mo` for Bengali)
+
+### Text Domain
+
+- **Text Domain:** `tutor-sslcommerz`
+- **Domain Path:** `/languages/`
+
+### Available Languages
+
+Currently available in:
+- English (default)
+
+Contributions for additional language translations are welcome!
 
 ## Troubleshooting
 
