@@ -10,7 +10,6 @@
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     tutor-sslcommerz
  *
- * @author          Hasin Hayder <https://github.com/hasinhayder>
  */
 
 defined('ABSPATH') || exit;
