@@ -365,8 +365,10 @@ class Sslcommerz extends BasePayment {
 			return $returnData;
 
 		} catch (Throwable $error) {
-			// Log the error for debugging
-			error_log('SSLCommerz IPN Error: ' . $error->getMessage());
+			// Log the error for debugging if WP_DEBUG is enabled
+			if (defined('WP_DEBUG') && WP_DEBUG) {
+				error_log('SSLCommerz IPN Error: ' . $error->getMessage());
+			}
 
 			// Return failed status instead of throwing
 			$returnData->payment_status = 'failed';
