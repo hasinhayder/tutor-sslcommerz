@@ -15,10 +15,6 @@ class ComposerStaticInit89023a050ad48aa51d80081e26c765cc
         array (
             'Payments\\Sslcommerz\\' => 20,
         ),
-        'O' => 
-        array (
-            'Ollyo\\PaymentHub\\' => 17,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -29,10 +25,6 @@ class ComposerStaticInit89023a050ad48aa51d80081e26c765cc
         'Payments\\Sslcommerz\\' => 
         array (
             0 => __DIR__ . '/../..' . '/payments',
-        ),
-        'Ollyo\\PaymentHub\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/../tutor/ecommerce/PaymentGateways/Paypal/src',
         ),
     );
 

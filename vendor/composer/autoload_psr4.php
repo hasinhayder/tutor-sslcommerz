@@ -8,5 +8,4 @@ $baseDir = dirname($vendorDir);
 return array(
     'TutorSslcommerz\\' => array($baseDir . '/integration'),
     'Payments\\Sslcommerz\\' => array($baseDir . '/payments'),
-    'Ollyo\\PaymentHub\\' => array($baseDir . '/../tutor/ecommerce/PaymentGateways/Paypal/src'),
 );

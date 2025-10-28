@@ -15,7 +15,6 @@
  *
  * @author Hasin Hayder <https://github.com/hasinhayder>
  * @link https://github.com/hasinhayder/tutor-sslcommerz
- * @since 1.0.0
  */
 
 namespace Payments\Sslcommerz;
@@ -33,8 +32,6 @@ use Ollyo\PaymentHub\Core\Payment\BasePayment;
  * This class extends BasePayment to provide SSLCommerz payment gateway functionality.
  * It implements the complete payment lifecycle from initiation to completion,
  * including validation and webhook processing.
- *
- * @since 1.0.0
  */
 class Sslcommerz extends BasePayment {
 	/**
@@ -318,35 +315,41 @@ class Sslcommerz extends BasePayment {
 				return $returnData;
 			}
 
-			if (empty($post_data['tran_id']) || empty($post_data['status'])) {
+			// Sanitize POST data
+			$sanitized_post = [];
+			foreach ($post_data as $key => $value) {
+				$sanitized_post[$key] = is_array($value) ? array_map('sanitize_text_field', array_map('wp_unslash', $value)) : sanitize_text_field(wp_unslash($value));
+			}
+
+			if (empty($sanitized_post['tran_id']) || empty($sanitized_post['status'])) {
 				$returnData->payment_status = 'failed';
 				$returnData->payment_error_reason = __('Invalid transaction data: Missing transaction ID or status.', 'tutor-sslcommerz');
 				return $returnData;
 			}
 
-			$tran_id = $post_data['tran_id'];
-			$amount = $post_data['amount'] ?? 0;
-			$currency = $post_data['currency'] ?? 'BDT';
-			$status = $post_data['status'];
+			$tran_id = $sanitized_post['tran_id'];
+			$amount = $sanitized_post['amount'] ?? 0;
+			$currency = $sanitized_post['currency'] ?? 'BDT';
+			$status = $sanitized_post['status'];
 
 			// Validate the transaction with SSLCommerz
-			$validated = $this->validateTransaction($post_data, $tran_id, $amount, $currency);
+			$validated = $this->validateTransaction($sanitized_post);
 
 			if ($validated) {
 				// Extract order ID from value_a or tran_id
-				$order_id = $post_data['value_a'] ?? '';
+				$order_id = $sanitized_post['value_a'] ?? '';
 
 				// Map SSLCommerz status to Tutor status
 				$payment_status = $this->mapPaymentStatus($status);
 
 				$returnData->id = $order_id;
 				$returnData->payment_status = $payment_status;
-				$returnData->transaction_id = $post_data['bank_tran_id'] ?? $tran_id;
-				$returnData->payment_payload = json_encode($post_data);
-				$returnData->payment_error_reason = $status !== 'VALID' && $status !== 'VALIDATED' ? ($post_data['error'] ?? __('Payment failed', 'tutor-sslcommerz')) : '';
+				$returnData->transaction_id = $sanitized_post['bank_tran_id'] ?? $tran_id;
+				$returnData->payment_payload = json_encode($sanitized_post);
+				$returnData->payment_error_reason = $status !== 'VALID' && $status !== 'VALIDATED' ? ($sanitized_post['error'] ?? __('Payment failed', 'tutor-sslcommerz')) : '';
 
 				// Calculate fees and earnings (SSLCommerz deducts their fee)
-				$store_amount = floatval($post_data['store_amount'] ?? $amount);
+				$store_amount = floatval($sanitized_post['store_amount'] ?? $amount);
 				$gateway_fee = floatval($amount) - $store_amount;
 
 				$returnData->fees = number_format($gateway_fee, 2, '.', '');
@@ -381,11 +384,15 @@ class Sslcommerz extends BasePayment {
 	 * @param string $currency Currency code
 	 * @return bool
 	 */
-	private function validateTransaction(array $post_data, string $tran_id, float $amount, string $currency): bool {
+	private function validateTransaction(array $post_data): bool {
 		// First verify hash if present
 		if (!$this->verifyHash($post_data)) {
 			return false;
 		}
+
+		$tran_id = $post_data['tran_id'];
+		$amount = $post_data['amount'] ?? 0;
+		$currency = $post_data['currency'] ?? 'BDT';
 
 		// Call SSLCommerz validation API using WordPress HTTP API
 		$val_id = urlencode($post_data['val_id'] ?? '');

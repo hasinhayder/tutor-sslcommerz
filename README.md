@@ -150,15 +150,18 @@ SSLCommerz supports the following currencies:
 ```
 tutor-sslcommerz/
 ├── tutor-sslcommerz.php           # Main plugin file
-├── composer.json                  # Autoload configuration
+├── composer.json                  # Composer dependencies
+├── composer.lock                  # Composer lock file
 ├── readme.txt                     # WordPress plugin readme
 ├── README.md                      # This file
+├── .gitignore                     # Git ignore rules
 ├── assets/                        # Plugin assets
-│   └── sslcommerz-logo.png        # Gateway logo (add your own)
+│   └── sslcommerz-logo.png        # Gateway logo
 ├── integration/                   # Tutor LMS integration
 │   ├── Init.php                   # Plugin initialization
 │   ├── SslcommerzConfig.php       # Configuration class
-│   └── SslcommerzGateway.php      # Gateway registration
+│   ├── SslcommerzGateway.php      # Gateway registration
+│   └── SslcommerzOrderProcess.php # Order processing and callbacks
 ├── languages/                     # Translation files
 │   └── tutor-sslcommerz.pot       # Translation template
 ├── payments/                      # Payment processing
@@ -218,6 +221,50 @@ Contributions for additional language translations are welcome!
 2. **Currency Conversion**: Non-BDT transactions are auto-converted to BDT
 3. **Refunds**: Manual refund processing through SSLCommerz merchant panel required
 
+## Changelog
+
+### Version 1.0.7 (October 28, 2025)
+- **Security**: Added comprehensive input sanitization to prevent XSS attacks
+- **Security**: Implemented proper data validation for all user inputs
+- **Security**: Enhanced hash verification with sanitized inputs
+- **Improvement**: Enhanced error handling and logging
+- **Improvement**: Code organization and structure improvements
+
+### Version 1.0.6
+- **Feature**: Added complete internationalization (i18n) support
+- **Feature**: Created translation template (.pot file)
+- **Improvement**: Added languages directory for translation files
+- **Improvement**: Updated plugin constants and code structure
+- **Improvement**: Enhanced documentation with translation information
+
+### Version 1.0.5
+- Minor fixes and improvements
+
+### Version 1.0.4
+- Minor fixes and improvements
+
+### Version 1.0.3
+- **Improvement**: Replaced cURL with WordPress HTTP API for better compatibility
+- **Improvement**: Enhanced error handling and JSON validation
+- **Improvement**: More descriptive error messages
+
+### Version 1.0.2
+- **Security**: Fixed fatal errors in IPN handling
+- **Security**: Improved validation for webhook requests
+- **Improvement**: Better error logging and debugging
+
+### Version 1.0.1
+- **Fix**: Corrected payment amount sending (was sending 0)
+- **Fix**: Updated to use correct Tutor LMS field names
+- **Improvement**: Added payment amount validation
+
+### Version 1.0.0
+- Initial release
+- One-time payment support
+- Sandbox and Live environments
+- IPN integration
+- Multi-currency support
+- Transaction validation
 
 ## Support
 

@@ -8,7 +8,6 @@
  *
  * @author Hasin Hayder <https://github.com/hasinhayder>
  * @link https://github.com/hasinhayder/tutor-sslcommerz
- * @since 1.0.0
  */
 
 namespace TutorSslcommerz;
@@ -22,8 +21,6 @@ use Tutor\PaymentGateways\GatewayBase;
  * This class extends GatewayBase to provide SSLCommerz payment gateway functionality
  * for Tutor LMS. It defines the gateway's directory structure, payment class, and
  * configuration class for seamless integration with the Tutor payment system.
- *
- * @since 1.0.0
  */
 class SslcommerzGateway extends GatewayBase {
 
@@ -32,8 +29,6 @@ class SslcommerzGateway extends GatewayBase {
 	 *
 	 * This method returns the directory name where SSLCommerz payment gateway
 	 * source files are located within the payments directory structure.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @return string The directory name ('Sslcommerz').
 	 */
@@ -47,8 +42,6 @@ class SslcommerzGateway extends GatewayBase {
 	 * Returns the fully qualified class name of the SSLCommerz payment processor
 	 * from the PaymentHub library, used for handling payment transactions.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @return string The SSLCommerz payment class name.
 	 */
 	public function get_payment_class(): string {
@@ -61,8 +54,6 @@ class SslcommerzGateway extends GatewayBase {
 	 * Returns the fully qualified class name of the SSLCommerz configuration class
 	 * that manages gateway settings, credentials, and environment configuration.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @return string The SSLCommerz configuration class name.
 	 */
 	public function get_config_class(): string {
@@ -74,8 +65,6 @@ class SslcommerzGateway extends GatewayBase {
 	 *
 	 * Returns an empty string as SSLCommerz uses Composer autoloading
 	 * and doesn't require a custom autoload file.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @return string Empty string (Composer autoloading is used).
 	 */

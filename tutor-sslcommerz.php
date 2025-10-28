@@ -3,7 +3,7 @@
  * Plugin Name:     Tutor SSLCommerz
  * Plugin URI:      https://github.com/hasinhayder/tutor-sslcommerz
  * Description:     SSLCommerz payment gateway integration for Tutor LMS (Free & Pro). Accept online payments directly within your Tutor LMS-powered site.
- * Version:         1.0.6
+ * Version:         1.0.7
  * Author:          Hasin Hayder
  * Author URI:      https://github.com/hasinhayder
  * License:         GPLv2 or later
@@ -18,15 +18,12 @@ defined('ABSPATH') || exit;
  * Main Plugin Class
  *
  * Handles plugin initialization and core functionality.
- *
- * @since 1.0.0
  */
 final class Tutor_SSLCommerz_Plugin {
 
 	/**
 	 * Single instance of the plugin
 	 *
-	 * @since 1.0.0
 	 * @var Tutor_SSLCommerz_Plugin|null
 	 */
 	private static $instance = null;
@@ -34,7 +31,6 @@ final class Tutor_SSLCommerz_Plugin {
 	/**
 	 * Get singleton instance
 	 *
-	 * @since 1.0.0
 	 * @return Tutor_SSLCommerz_Plugin
 	 */
 	public static function get_instance(): self {
@@ -46,8 +42,6 @@ final class Tutor_SSLCommerz_Plugin {
 
 	/**
 	 * Constructor - Initialize the plugin
-	 *
-	 * @since 1.0.0
 	 */
 	private function __construct() {
 		$this->init();
@@ -55,8 +49,6 @@ final class Tutor_SSLCommerz_Plugin {
 
 	/**
 	 * Initialize the plugin
-	 *
-	 * @since 1.0.0
 	 */
 	private function init(): void {
 		$this->load_dependencies();
@@ -66,8 +58,6 @@ final class Tutor_SSLCommerz_Plugin {
 
 	/**
 	 * Load plugin dependencies
-	 *
-	 * @since 1.0.0
 	 */
 	private function load_dependencies(): void {
 		require_once __DIR__ . '/vendor/autoload.php';
@@ -79,19 +69,15 @@ final class Tutor_SSLCommerz_Plugin {
 
 	/**
 	 * Define plugin constants
-	 *
-	 * @since 1.0.0
 	 */
 	private function define_constants(): void {
-		define('TUTOR_SSLCOMMERZ_VERSION', '1.0.6');
+		define('TUTOR_SSLCOMMERZ_VERSION', '1.0.7');
 		define('TUTOR_SSLCOMMERZ_URL', plugin_dir_url(__FILE__));
 		define('TUTOR_SSLCOMMERZ_PATH', plugin_dir_path(__FILE__));
 	}
 
 	/**
 	 * Initialize WordPress hooks
-	 *
-	 * @since 1.0.0
 	 */
 	private function init_hooks(): void {
 		add_action('plugins_loaded', [$this, 'load_textdomain'], 1);
@@ -100,8 +86,6 @@ final class Tutor_SSLCommerz_Plugin {
 
 	/**
 	 * Load plugin text domain for internationalization
-	 *
-	 * @since 1.0.0
 	 */
 	public function load_textdomain(): void {
 		load_plugin_textdomain(
@@ -113,8 +97,6 @@ final class Tutor_SSLCommerz_Plugin {
 
 	/**
 	 * Initialize the SSLCommerz payment gateway
-	 *
-	 * @since 1.0.0
 	 */
 	public function init_gateway(): void {
 		//works with the free version of Tutor LMS 

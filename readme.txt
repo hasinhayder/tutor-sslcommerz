@@ -2,9 +2,9 @@
 Contributors: hasinhayder
 Tags: tutor, lms, sslcommerz, payment, bangladesh, e-commerce, gateway
 Requires at least: 5.3
-Tested up to: 6.4
+Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,6 +126,13 @@ Refunds must be processed manually through the SSLCommerz merchant panel. The pl
 
 == Changelog ==
 
+= 1.0.7 =
+* Security: Added comprehensive input sanitization to prevent XSS attacks
+* Security: Implemented proper data validation for all user inputs
+* Security: Enhanced hash verification with sanitized inputs
+* Improvement: Enhanced error handling and logging
+* Improvement: Code organization and structure improvements
+
 = 1.0.6 =
 * Feature: Added complete internationalization (i18n) support
 * Feature: Created translation template (.pot file)
@@ -163,6 +170,9 @@ Minor Fixes
 * Transaction validation
 
 == Upgrade Notice ==
+
+= 1.0.7 =
+Critical security update with input sanitization and validation improvements. Update immediately for enhanced security.
 
 = 1.0.6 =
 Adds internationalization support and improved documentation.
