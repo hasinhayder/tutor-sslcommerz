@@ -9,7 +9,7 @@
  * License:         GPLv2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     tutor-sslcommerz
- * Domain Path:    /languages
+ * Domain Path:     /languages
  */
 
 defined('ABSPATH') || exit;
@@ -82,17 +82,6 @@ final class Tutor_SSLCommerz_Plugin {
 	private function init_hooks(): void {
 		add_action('plugins_loaded', [$this, 'load_textdomain'], 1);
 		add_action('plugins_loaded', [$this, 'init_gateway'], 100);
-	}
-
-	/**
-	 * Load plugin text domain for internationalization
-	 */
-	public function load_textdomain(): void {
-		load_plugin_textdomain(
-			'tutor-sslcommerz',
-			false,
-			TUTOR_SSLCOMMERZ_PATH . 'languages/'
-		);
 	}
 
 	/**
