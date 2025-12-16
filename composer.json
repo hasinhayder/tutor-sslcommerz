@@ -1,7 +1,7 @@
 {
     "version": "1.0.3",
     "name": "hasinhayder/tutor-sslcommerz",
-    "description": "SSLCommerz payment gateway integration for Tutor LMS",
+    "description": "TS Pay - SSLCommerz payment gateway integration for Tutor LMS",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -16,7 +16,7 @@
     "autoload": {
         "psr-4": {
             "Payments\\Sslcommerz\\": "payments/",
-            "TutorSslcommerz\\": "integration/"
+            "TSPay\\": "integration/"
         }
     }
 }

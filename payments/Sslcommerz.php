@@ -14,7 +14,7 @@
  * - Comprehensive error handling and logging
  *
  * @author Hasin Hayder <https://github.com/hasinhayder>
- * @link https://github.com/hasinhayder/tutor-sslcommerz
+ * @link https://github.com/hasinhayder/tspay
  */
 
 namespace Payments\Sslcommerz;
@@ -135,15 +135,15 @@ class Sslcommerz extends BasePayment {
 	private function prepareData(object $data): array {
 		// Validate required data
 		if (!isset($data->order_id) || empty($data->order_id)) {
-			throw new \InvalidArgumentException(__('Order ID is required for payment processing', 'tutor-sslcommerz'));
+			throw new \InvalidArgumentException(__('Order ID is required for payment processing', 'tspay'));
 		}
 
 		if (!isset($data->currency) || !isset($data->currency->code)) {
-			throw new \InvalidArgumentException(__('Currency information is required for payment processing', 'tutor-sslcommerz'));
+			throw new \InvalidArgumentException(__('Currency information is required for payment processing', 'tspay'));
 		}
 
 		if (!isset($data->customer) || !isset($data->customer->email)) {
-			throw new \InvalidArgumentException(__('Customer email is required for payment processing', 'tutor-sslcommerz'));
+			throw new \InvalidArgumentException(__('Customer email is required for payment processing', 'tspay'));
 		}
 
 		// Generate unique transaction ID
@@ -154,7 +154,7 @@ class Sslcommerz extends BasePayment {
 
 		// Validate amount
 		if ($total_price <= 0) {
-			throw new \InvalidArgumentException(__('Payment amount must be greater than zero', 'tutor-sslcommerz'));
+			throw new \InvalidArgumentException(__('Payment amount must be greater than zero', 'tspay'));
 		}
 
 		// Format amounts for SSLCommerz
@@ -168,7 +168,7 @@ class Sslcommerz extends BasePayment {
 			'currency' => $data->currency->code,
 			'tran_id' => $tran_id,
 			'product_category' => self::PRODUCT_CATEGORY,
-			'product_name' => $data->order_description ?? __('Course Purchase', 'tutor-sslcommerz'),
+			'product_name' => $data->order_description ?? __('Course Purchase', 'tspay'),
 			'product_profile' => self::PRODUCT_PROFILE,
 
 			// URLs
@@ -178,31 +178,31 @@ class Sslcommerz extends BasePayment {
 			'ipn_url' => $this->config->get('webhook_url'),
 
 			// Customer information
-			'cus_name' => $data->customer->name ?? __('Customer', 'tutor-sslcommerz'),
+			'cus_name' => $data->customer->name ?? __('Customer', 'tspay'),
 			'cus_email' => $data->customer->email,
-			'cus_add1' => $data->billing_address->address1 ?? __('N/A', 'tutor-sslcommerz'),
+			'cus_add1' => $data->billing_address->address1 ?? __('N/A', 'tspay'),
 			'cus_add2' => $data->billing_address->address2 ?? '',
-			'cus_city' => $data->billing_address->city ?? __('N/A', 'tutor-sslcommerz'),
+			'cus_city' => $data->billing_address->city ?? __('N/A', 'tspay'),
 			'cus_state' => $data->billing_address->state ?? '',
 			'cus_postcode' => $data->billing_address->postal_code ?? self::DEFAULT_POSTCODE,
-			'cus_country' => $data->billing_address->country->name ?? ($data->currency->code === self::DEFAULT_CURRENCY ? self::DEFAULT_COUNTRY : __('N/A', 'tutor-sslcommerz')),
+			'cus_country' => $data->billing_address->country->name ?? ($data->currency->code === self::DEFAULT_CURRENCY ? self::DEFAULT_COUNTRY : __('N/A', 'tspay')),
 			'cus_phone' => $data->customer->phone_number ?? self::DEFAULT_PHONE,
 
 			// Shipping information (same as billing for digital products)
 			'shipping_method' => self::SHIPPING_METHOD,
 			'num_of_item' => 1,
-			'ship_name' => $data->customer->name ?? __('Customer', 'tutor-sslcommerz'),
-			'ship_add1' => $data->billing_address->address1 ?? __('N/A', 'tutor-sslcommerz'),
+			'ship_name' => $data->customer->name ?? __('Customer', 'tspay'),
+			'ship_add1' => $data->billing_address->address1 ?? __('N/A', 'tspay'),
 			'ship_add2' => $data->billing_address->address2 ?? '',
-			'ship_city' => $data->billing_address->city ?? __('N/A', 'tutor-sslcommerz'),
+			'ship_city' => $data->billing_address->city ?? __('N/A', 'tspay'),
 			'ship_state' => $data->billing_address->state ?? '',
 			'ship_postcode' => $data->billing_address->postal_code ?? self::DEFAULT_POSTCODE,
-			'ship_country' => $data->billing_address->country->name ?? ($data->currency->code === self::DEFAULT_CURRENCY ? self::DEFAULT_COUNTRY : __('N/A', 'tutor-sslcommerz')),
+			'ship_country' => $data->billing_address->country->name ?? ($data->currency->code === self::DEFAULT_CURRENCY ? self::DEFAULT_COUNTRY : __('N/A', 'tspay')),
 
 			// Additional information
 			'value_a' => $data->order_id, // Store our order ID for reference
 			'value_b' => $data->customer->email,
-			'value_c' => $data->store_name ?? __('Tutor LMS', 'tutor-sslcommerz'),
+			'value_c' => $data->store_name ?? __('Tutor LMS', 'tspay'),
 			'product_amount' => $product_amount,
 		];
 
@@ -232,11 +232,11 @@ class Sslcommerz extends BasePayment {
 					header("Location: " . $response['GatewayPageURL']);
 					exit;
 				} else {
-					throw new ErrorException(__('Gateway URL not found in response', 'tutor-sslcommerz'));
+					throw new ErrorException(__('Gateway URL not found in response', 'tspay'));
 				}
 			} else {
-				$errorMessage = $response['failedreason'] ?? __('Unknown error occurred', 'tutor-sslcommerz');
-				throw new ErrorException(__('SSLCommerz Payment Failed: ', 'tutor-sslcommerz') . $errorMessage);
+				$errorMessage = $response['failedreason'] ?? __('Unknown error occurred', 'tspay');
+				throw new ErrorException(__('SSLCommerz Payment Failed: ', 'tspay') . $errorMessage);
 			}
 
 		} catch (RequestException $error) {
@@ -275,7 +275,7 @@ class Sslcommerz extends BasePayment {
 
 		// Check for errors
 		if (is_wp_error($response)) {
-			return ['status' => 'FAILED', 'failedreason' => __('Failed to connect with SSLCommerz API: ', 'tutor-sslcommerz') . $response->get_error_message()];
+			return ['status' => 'FAILED', 'failedreason' => __('Failed to connect with SSLCommerz API: ', 'tspay') . $response->get_error_message()];
 		}
 
 		// Get response code and body
@@ -287,10 +287,10 @@ class Sslcommerz extends BasePayment {
 			if (json_last_error() === JSON_ERROR_NONE) {
 				return $decoded;
 			} else {
-				return ['status' => 'FAILED', 'failedreason' => __('Invalid JSON response from SSLCommerz API', 'tutor-sslcommerz')];
+				return ['status' => 'FAILED', 'failedreason' => __('Invalid JSON response from SSLCommerz API', 'tspay')];
 			}
 		} else {
-			return ['status' => 'FAILED', 'failedreason' => __('Failed to connect with SSLCommerz API (HTTP ', 'tutor-sslcommerz') . $http_code . ')'];
+			return ['status' => 'FAILED', 'failedreason' => __('Failed to connect with SSLCommerz API (HTTP ', 'tspay') . $http_code . ')'];
 		}
 	}
 
@@ -311,7 +311,7 @@ class Sslcommerz extends BasePayment {
 			// Validate that we have POST data
 			if (empty($post_data) || !is_array($post_data)) {
 				$returnData->payment_status = 'failed';
-				$returnData->payment_error_reason = __('No transaction data received. IPN endpoint should only receive POST requests from SSLCommerz.', 'tutor-sslcommerz');
+				$returnData->payment_error_reason = __('No transaction data received. IPN endpoint should only receive POST requests from SSLCommerz.', 'tspay');
 				return $returnData;
 			}
 
@@ -323,7 +323,7 @@ class Sslcommerz extends BasePayment {
 
 			if (empty($sanitized_post['tran_id']) || empty($sanitized_post['status'])) {
 				$returnData->payment_status = 'failed';
-				$returnData->payment_error_reason = __('Invalid transaction data: Missing transaction ID or status.', 'tutor-sslcommerz');
+				$returnData->payment_error_reason = __('Invalid transaction data: Missing transaction ID or status.', 'tspay');
 				return $returnData;
 			}
 
@@ -346,7 +346,7 @@ class Sslcommerz extends BasePayment {
 				$returnData->payment_status = $payment_status;
 				$returnData->transaction_id = $sanitized_post['bank_tran_id'] ?? $tran_id;
 				$returnData->payment_payload = json_encode($sanitized_post);
-				$returnData->payment_error_reason = $status !== 'VALID' && $status !== 'VALIDATED' ? ($sanitized_post['error'] ?? __('Payment failed', 'tutor-sslcommerz')) : '';
+				$returnData->payment_error_reason = $status !== 'VALID' && $status !== 'VALIDATED' ? ($sanitized_post['error'] ?? __('Payment failed', 'tspay')) : '';
 
 				// Calculate fees and earnings (SSLCommerz deducts their fee)
 				$store_amount = floatval($sanitized_post['store_amount'] ?? $amount);
@@ -359,7 +359,7 @@ class Sslcommerz extends BasePayment {
 			} else {
 				// Validation failed
 				$returnData->payment_status = 'failed';
-				$returnData->payment_error_reason = __('Transaction validation with SSLCommerz API failed.', 'tutor-sslcommerz');
+				$returnData->payment_error_reason = __('Transaction validation with SSLCommerz API failed.', 'tspay');
 			}
 
 			return $returnData;
@@ -372,7 +372,7 @@ class Sslcommerz extends BasePayment {
 
 			// Return failed status instead of throwing
 			$returnData->payment_status = 'failed';
-			$returnData->payment_error_reason = __('Error processing payment: ', 'tutor-sslcommerz') . $error->getMessage();
+			$returnData->payment_error_reason = __('Error processing payment: ', 'tspay') . $error->getMessage();
 			return $returnData;
 		}
 	}

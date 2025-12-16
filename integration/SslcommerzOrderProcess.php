@@ -7,10 +7,10 @@
  * and updates order status in the database accordingly.
  *
  * @author Hasin Hayder <https://github.com/hasinhayder>
- * @link https://github.com/hasinhayder/tutor-sslcommerz
+ * @link https://github.com/hasinhayder/tspay
  */
 
-namespace TutorSslcommerz;
+namespace TSPay;
 
 /**
  * SSLCommerz Order Process Class

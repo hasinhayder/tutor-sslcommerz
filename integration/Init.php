@@ -6,8 +6,8 @@
  * @link https://github.com/hasinhayder/tutor-sslcommerz
  */
 
-namespace TutorSslcommerz;
-use TutorSslcommerz\SslcommerzOrderProcess;
+namespace TSPay;
+use TSPay\SslcommerzOrderProcess;
 
 /**
  * Init class
@@ -88,42 +88,42 @@ final class Init {
     public function add_tutor_sslcommerz_payment_method(array $methods): array {
         $sslcommerz_payment_method = [
             'name' => 'sslcommerz',
-            'label' => __('SSLCommerz', 'tutor-sslcommerz'),
+            'label' => __('SSLCommerz', 'tspay'),
             'is_installed' => true,
             'is_active' => true,
-            'icon' => TUTOR_SSLCOMMERZ_URL . 'assets/sslcommerz-logo.png',
+            'icon' => TSPAY_URL . 'assets/sslcommerz-logo.png',
             'support_subscription' => false, // SSLCommerz doesn't support subscriptions
             'fields' => [
                 [
                     'name' => 'environment',
                     'type' => 'select',
-                    'label' => __('Environment', 'tutor-sslcommerz'),
+                    'label' => __('Environment', 'tspay'),
                     'options' => [
-                        'sandbox' => __('Sandbox', 'tutor-sslcommerz'),
-                        'live' => __('Live', 'tutor-sslcommerz'),
+                        'sandbox' => __('Sandbox', 'tspay'),
+                        'live' => __('Live', 'tspay'),
                     ],
                     'value' => 'sandbox',
                 ],
                 [
                     'name' => 'store_id',
                     'type' => 'text',
-                    'label' => __('Store ID', 'tutor-sslcommerz'),
+                    'label' => __('Store ID', 'tspay'),
                     'value' => '',
-                    'desc' => __('Your SSLCommerz Store ID. For sandbox, register at https://developer.sslcommerz.com/registration/', 'tutor-sslcommerz'),
+                    'desc' => __('Your SSLCommerz Store ID. For sandbox, register at https://developer.sslcommerz.com/registration/', 'tspay'),
                 ],
                 [
                     'name' => 'store_password',
                     'type' => 'secret_key',
-                    'label' => __('Store Password', 'tutor-sslcommerz'),
+                    'label' => __('Store Password', 'tspay'),
                     'value' => '',
-                    'desc' => __('Your SSLCommerz Store Password (NOT your merchant panel password)', 'tutor-sslcommerz'),
+                    'desc' => __('Your SSLCommerz Store Password (NOT your merchant panel password)', 'tspay'),
                 ],
                 [
                     'name' => 'webhook_url',
                     'type' => 'webhook_url',
-                    'label' => __('IPN URL', 'tutor-sslcommerz'),
+                    'label' => __('IPN URL', 'tspay'),
                     'value' => '',
-                    'desc' => __('Copy this URL and add it to your SSLCommerz merchant panel as IPN URL', 'tutor-sslcommerz'),
+                    'desc' => __('Copy this URL and add it to your SSLCommerz merchant panel as IPN URL', 'tspay'),
                 ],
             ],
         ];

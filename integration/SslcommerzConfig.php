@@ -6,7 +6,7 @@
  * @link https://github.com/hasinhayder/tutor-sslcommerz
  */
 
-namespace TutorSslcommerz;
+namespace TSPay;
 
 use Tutor\Ecommerce\Settings;
 use Ollyo\PaymentHub\Core\Payment\BaseConfig;
@@ -79,7 +79,7 @@ class SslcommerzConfig extends BaseConfig implements ConfigContract {
 		$settings = Settings::get_payment_gateway_settings('sslcommerz');
 
 		if (!is_array($settings)) {
-			throw new \RuntimeException(__('Unable to load SSLCommerz gateway settings', 'tutor-sslcommerz'));
+			throw new \RuntimeException(__('Unable to load SSLCommerz gateway settings', 'tspay'));
 		}
 
 		$config_keys = array_keys(self::CONFIG_KEYS);

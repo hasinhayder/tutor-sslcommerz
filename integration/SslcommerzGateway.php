@@ -10,7 +10,7 @@
  * @link https://github.com/hasinhayder/tutor-sslcommerz
  */
 
-namespace TutorSslcommerz;
+namespace TSPay;
 
 use Payments\Sslcommerz\Sslcommerz;
 use Tutor\PaymentGateways\GatewayBase;

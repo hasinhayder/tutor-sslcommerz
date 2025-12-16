@@ -7,22 +7,22 @@ namespace Composer\Autoload;
 class ComposerStaticInit89023a050ad48aa51d80081e26c765cc
 {
     public static $prefixLengthsPsr4 = array (
-        'T' => 
+        'T' =>
         array (
-            'TutorSslcommerz\\' => 16,
+            'TSPay\\' => 6,
         ),
-        'P' => 
+        'P' =>
         array (
             'Payments\\Sslcommerz\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'TutorSslcommerz\\' => 
+        'TSPay\\' =>
         array (
             0 => __DIR__ . '/../..' . '/integration',
         ),
-        'Payments\\Sslcommerz\\' => 
+        'Payments\\Sslcommerz\\' =>
         array (
             0 => __DIR__ . '/../..' . '/payments',
         ),

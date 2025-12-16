@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     Tutor SSLCommerz
+ * Plugin Name:    	TS Pay
  * Plugin URI:      https://github.com/hasinhayder/tutor-sslcommerz
  * Description:     SSLCommerz payment gateway integration for Tutor LMS (Free & Pro). Accept online payments directly within your Tutor LMS-powered site.
  * Version:         1.0.7
@@ -8,31 +8,15 @@
  * Author URI:      https://github.com/hasinhayder
  * License:         GPLv2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:     tutor-sslcommerz
+ * Text Domain:     tspay
  * Domain Path:     /languages
  */
 
 defined('ABSPATH') || exit;
 
-/**
- * Main Plugin Class
- *
- * Handles plugin initialization and core functionality.
- */
-final class Tutor_SSLCommerz_Plugin {
+final class TSPay {
 
-	/**
-	 * Single instance of the plugin
-	 *
-	 * @var Tutor_SSLCommerz_Plugin|null
-	 */
 	private static $instance = null;
-
-	/**
-	 * Get singleton instance
-	 *
-	 * @return Tutor_SSLCommerz_Plugin
-	 */
 	public static function get_instance(): self {
 		if (null === self::$instance) {
 			self::$instance = new self();
@@ -40,9 +24,6 @@ final class Tutor_SSLCommerz_Plugin {
 		return self::$instance;
 	}
 
-	/**
-	 * Constructor - Initialize the plugin
-	 */
 	private function __construct() {
 		$this->init();
 	}
@@ -71,16 +52,15 @@ final class Tutor_SSLCommerz_Plugin {
 	 * Define plugin constants
 	 */
 	private function define_constants(): void {
-		define('TUTOR_SSLCOMMERZ_VERSION', '1.0.7');
-		define('TUTOR_SSLCOMMERZ_URL', plugin_dir_url(__FILE__));
-		define('TUTOR_SSLCOMMERZ_PATH', plugin_dir_path(__FILE__));
+		define('TSPAY_VERSION', '1.0.7');
+		define('TSPAY_URL', plugin_dir_url(__FILE__));
+		define('TSPAY_PATH', plugin_dir_path(__FILE__));
 	}
 
 	/**
 	 * Initialize WordPress hooks
 	 */
 	private function init_hooks(): void {
-		add_action('plugins_loaded', [$this, 'load_textdomain'], 1);
 		add_action('plugins_loaded', [$this, 'init_gateway'], 100);
 	}
 
@@ -90,10 +70,10 @@ final class Tutor_SSLCommerz_Plugin {
 	public function init_gateway(): void {
 		//works with the free version of Tutor LMS 
 		if (is_plugin_active('tutor/tutor.php')) {
-			new TutorSslcommerz\Init();
+			new TSPay\Init();
 		}
 	}
 }
 
 // Initialize the plugin
-Tutor_SSLCommerz_Plugin::get_instance();
+TSPay::get_instance();

@@ -1,10 +1,10 @@
-# Tutor SSLCommerz Payment Gateway
+# TS Pay
 
 **Author:** Hasin Hayder  
 **GitHub:** [https://github.com/hasinhayder](https://github.com/hasinhayder)  
 **Plugin Repository:** [https://github.com/hasinhayder/tutor-sslcommerz](https://github.com/hasinhayder/tutor-sslcommerz)
 
-SSLCommerz payment gateway integration for Tutor LMS. This plugin enables one-time course payments through SSLCommerz.
+TS Pay integrates SSLCommerz Tutor LMS. This plugin enables one-time course payments through SSLCommerz.
 
 ## Features
 
@@ -95,7 +95,7 @@ Student clicks "Purchase"
     ↓
 Plugin sends payment request to SSLCommerz
     ↓
-Student redirected to SSLCommerz payment page
+Student redirected# TS Pay
     ↓
 Student completes payment
     ↓
@@ -182,7 +182,7 @@ This plugin supports internationalization and is translation-ready. All user-fac
 
 ### Text Domain
 
-- **Text Domain:** `tutor-sslcommerz`
+- **Text Domain:** `integrate-sslcommerz-tutor`
 - **Domain Path:** `/languages/`
 
 ### Available Languages
