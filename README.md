@@ -4,7 +4,7 @@
 **GitHub:** [https://github.com/hasinhayder](https://github.com/hasinhayder)  
 **Plugin Repository:** [https://github.com/hasinhayder/tutor-sslcommerz](https://github.com/hasinhayder/tutor-sslcommerz)
 
-TS Pay integrates SSLCommerz Tutor LMS. This plugin enables one-time course payments through SSLCommerz.
+TS Pay integrates SSLCommerz with Tutor LMS. This plugin enables one-time course payments through SSLCommerz.
 
 ## Features
 
@@ -145,44 +145,14 @@ SSLCommerz supports the following currencies:
 - Validates transaction
 - Updates order status
 
-## File Structure
-
-```
-tutor-sslcommerz/
-├── tutor-sslcommerz.php           # Main plugin file
-├── composer.json                  # Composer dependencies
-├── composer.lock                  # Composer lock file
-├── readme.txt                     # WordPress plugin readme
-├── README.md                      # This file
-├── .gitignore                     # Git ignore rules
-├── assets/                        # Plugin assets
-│   └── sslcommerz-logo.png        # Gateway logo
-├── integration/                   # Tutor LMS integration
-│   ├── Init.php                   # Plugin initialization
-│   ├── SslcommerzConfig.php       # Configuration class
-│   ├── SslcommerzGateway.php      # Gateway registration
-│   └── SslcommerzOrderProcess.php # Order processing and callbacks
-├── languages/                     # Translation files
-│   └── tutor-sslcommerz.pot       # Translation template
-├── payments/                      # Payment processing
-│   └── Sslcommerz.php             # Core payment logic
-└── vendor/                        # Composer autoload
-```
 
 ## Internationalization (i18n)
 
 This plugin supports internationalization and is translation-ready. All user-facing strings are wrapped with WordPress translation functions.
 
-### For Translators
-
-1. Use the `languages/tutor-sslcommerz.pot` file as a template
-2. Create language-specific `.po` files using tools like Poedit or Loco Translate
-3. Compile `.mo` files and place them in the `languages/` directory
-4. File naming: `tutor-sslcommerz-{locale}.mo` (e.g., `tutor-sslcommerz-bn_BD.mo` for Bengali)
-
 ### Text Domain
 
-- **Text Domain:** `integrate-sslcommerz-tutor`
+- **Text Domain:** `tspay`
 - **Domain Path:** `/languages/`
 
 ### Available Languages
