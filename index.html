@@ -141,20 +141,20 @@
         ::-webkit-scrollbar {
             width: 10px;
         }
-
+        
         ::-webkit-scrollbar-track {
             background: #09090b;
         }
-
+        
         ::-webkit-scrollbar-thumb {
             background: #3f3f46;
             border-radius: 5px;
         }
-
+        
         ::-webkit-scrollbar-thumb:hover {
             background: #52525b;
         }
-
+        
         /* Firefox scrollbar */
         * {
             scrollbar-color: #3f3f46 #09090b;
@@ -163,10 +163,7 @@
 
         /* Page scaling */
         body {
-            transform: scale(1.1);
-            transform-origin: top center;
-            width: calc(100% / 1.1);
-            height: calc(100% / 1.1);
+            zoom:110%;
         }
     </style>
 </head>
@@ -372,9 +369,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
                     <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:gift" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2m-4-3V5a2 2 0 1 0-4 0v1m4 0a2 2 0 1 0-4 0"></path>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:gift" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2m-4-3V5a2 2 0 1 0-4 0v1m4 0a2 2 0 1 0-4 0"></path></svg>
                     </div>
                     <h3 class="text-lg font-medium mb-2">Tutor Free & Pro Compatible</h3>
                     <p class="text-sm text-zinc-400 leading-relaxed">TSPay works seamlessly with both Tutor LMS Free and Pro versions, giving you flexibility to choose your preferred edition.</p>
@@ -519,8 +514,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
-                                <h3 class="text-base font-medium mb-1">Payment Request Sent</h3>
-                                <p class="text-sm text-zinc-400">Plugin sends payment request to SSLCommerz API endpoint: <code class="px-1 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">/gwprocess/v4/api.php</code></p>
+                                <h3 class="text-base font-medium mb-1">Your Site Connects with SSLCommerz</h3>
+                                <p class="text-sm text-zinc-400">Behind the scenes, your site securely communicates with SSLCommerz to initiate the payment process.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
@@ -530,8 +525,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
-                                <h3 class="text-base font-medium mb-1">Redirect to SSLCommerz</h3>
-                                <p class="text-sm text-zinc-400">Student is redirected to the secure SSLCommerz payment page to complete the transaction.</p>
+                                <h3 class="text-base font-medium mb-1">Student Enters Payment Details</h3>
+                                <p class="text-sm text-zinc-400">The student is taken to a secure SSLCommerz payment gateway where they choose their preferred payment method and complete the transaction.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
@@ -555,8 +550,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
-                                <h3 class="text-base font-medium mb-1">IPN Notification Received</h3>
-                                <p class="text-sm text-zinc-400">SSLCommerz sends Instant Payment Notification (IPN) to your configured webhook URL.</p>
+                                <h3 class="text-base font-medium mb-1">Payment Result Confirmed</h3>
+                                <p class="text-sm text-zinc-400">SSLCommerz instantly notifies your site about the payment result—whether it succeeded, failed, or was cancelled.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
@@ -569,8 +564,8 @@
                                 </svg>
                             </div>
                             <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
-                                <h3 class="text-base font-medium mb-1">Transaction Validation</h3>
-                                <p class="text-sm text-zinc-400">Plugin validates transaction via SSLCommerz API: <code class="px-1 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">/validator/api/validationserverAPI.php</code></p>
+                                <h3 class="text-base font-medium mb-1">Security Check</h3>
+                                <p class="text-sm text-zinc-400">Our plugin verifies the payment through a secure validation process, ensuring everything is legitimate and safe.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
