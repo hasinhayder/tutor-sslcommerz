@@ -1,6 +1,6 @@
 === TS Pay ===
 Contributors: hasinhayder
-Tags: tutor-lms, tutor, lms, sslcommerz, tutor,bkash 
+Tags: tutor-lms, tutor, sslcommerz, tutor, bkash 
 Requires at least: 5.3
 Tested up to: 6.9
 Requires PHP: 7.4
