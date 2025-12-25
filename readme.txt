@@ -1,6 +1,6 @@
 === TS Pay ===
 Contributors: hasinhayder
-Tags: tutor-lms, tutor, lms, sslcommerz, payment, bangladesh, e-commerce, gateway
+Tags: tutor-lms, tutor, lms, sslcommerz, tutor,bkash 
 Requires at least: 5.3
 Tested up to: 6.9
 Requires PHP: 7.4
@@ -8,7 +8,7 @@ Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-SSLCommerz payment gateway integration for Tutor LMS. This plugin enables one-time course payments through SSLCommerz, supporting multiple currencies and secure payment processing.
+Seamlessly integrate SSLCommerz with Tutor LMS for secure, multi-currency course payments via cards, mobile banking, and more.
 
 == Description ==
 
