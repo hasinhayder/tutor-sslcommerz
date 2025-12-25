@@ -1,0 +1,1683 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TS Pay - SSLCommerz payment gateway integration for Tutor LMS. Accept secure online payments for your courses.">
+    <title>TS Pay - SSLCommerz Payment Gateway for Tutor LMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-geist">
+        .font-geist {
+            font-family: 'Geist', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-roboto">
+        .font-roboto {
+            font-family: 'Roboto', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-montserrat">
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-poppins">
+        .font-poppins {
+            font-family: 'Poppins', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+    <style id="all-fonts-style-font-playfair">
+        .font-playfair {
+            font-family: 'Playfair Display', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-instrument-serif">
+        .font-instrument-serif {
+            font-family: 'Instrument Serif', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap">
+    <style id="all-fonts-style-font-merriweather">
+        .font-merriweather {
+            font-family: 'Merriweather', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-bricolage">
+        .font-bricolage {
+            font-family: 'Bricolage Grotesque', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-jakarta">
+        .font-jakarta {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-manrope">
+        .font-manrope {
+            font-family: 'Manrope', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-space-grotesk">
+        .font-space-grotesk {
+            font-family: 'Space Grotesk', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-work-sans">
+        .font-work-sans {
+            font-family: 'Work Sans', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
+    <style id="all-fonts-style-font-pt-serif">
+        .font-pt-serif {
+            font-family: 'PT Serif', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-geist-mono">
+        .font-geist-mono {
+            font-family: 'Geist Mono', monospace !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap">
+    <style id="all-fonts-style-font-space-mono">
+        .font-space-mono {
+            font-family: 'Space Mono', monospace !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-quicksand">
+        .font-quicksand {
+            font-family: 'Quicksand', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap">
+    <style id="all-fonts-style-font-nunito">
+        .font-nunito {
+            font-family: 'Nunito', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap">
+    <style id="all-fonts-style-font-newsreader">
+        .font-newsreader {
+            font-family: 'Newsreader', serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-google-sans-flex">
+        .font-google-sans-flex {
+            font-family: 'Google Sans Flex', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-oswald">
+        .font-oswald {
+            font-family: 'Oswald', sans-serif !important;
+        }
+    </style>
+    <link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-dm-sans">
+        .font-dm-sans {
+            font-family: 'DM Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-950 text-zinc-100 font-['Inter'] antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="16" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                <path d="M2 10h20"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-semibold tracking-tight">TS Pay</span>
+                </div>
+                <ul class="hidden lg:flex items-center gap-6">
+                    <li class=""><a href="#features" class="text-sm text-zinc-400 hover:text-white transition-colors">Features</a></li>
+                    <li class=""><a href="#payment-flow" class="text-sm text-zinc-400 hover:text-white transition-colors">How It Works</a></li>
+                    <li class=""><a href="#installation" class="text-sm text-zinc-400 hover:text-white transition-colors">Installation</a></li>
+                    <li><a href="#testing" class="text-sm text-zinc-400 hover:text-white transition-colors">Testing</a></li>
+                    <li><a href="#changelog" class="text-sm text-zinc-400 hover:text-white transition-colors">Changelog</a></li>
+                    <li class=""><a href="#faq" class="text-sm text-zinc-400 hover:text-white transition-colors">FAQ</a></li>
+                    <li>
+                        <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-zinc-800 hover:bg-zinc-700 rounded-lg border border-zinc-700 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:download" data-width="14" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <path d="m7 10l5 5l5-5"></path>
+                                </g>
+                            </svg>
+                            WordPress
+                        </a>
+                    </li>
+                </ul>
+                <button class="lg:hidden p-2 text-zinc-400 hover:text-white" id="mobileMenuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:menu" data-width="24" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden lg:hidden bg-zinc-900 border-t border-zinc-800" id="mobileMenu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#features" class="block text-sm text-zinc-400 hover:text-white py-2">Features</a>
+                <a href="#payment-flow" class="block text-sm text-zinc-400 hover:text-white py-2">How It Works</a>
+                <a href="#installation" class="block text-sm text-zinc-400 hover:text-white py-2">Installation</a>
+                <a href="#testing" class="block text-sm text-zinc-400 hover:text-white py-2">Testing</a>
+                <a href="#changelog" class="block text-sm text-zinc-400 hover:text-white py-2">Changelog</a>
+                <a href="#faq" class="block text-sm text-zinc-400 hover:text-white py-2">FAQ</a>
+                <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-zinc-800 rounded-lg border border-zinc-700">
+                    WordPress
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-32 relative overflow-hidden">
+        <div class="bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
+        <div class="-translate-x-1/2 -translate-y-1/2 bg-emerald-500/10 opacity-30 w-[800px] h-[800px] rounded-full absolute top-1/2 left-1/2 blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+                        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                        <span class="text-xs font-medium text-emerald-400">Version 1.1</span>
+                    </div>
+                    <h1 class="lg:text-5xl xl:text-6xl leading-tight text-4xl font-semibold tracking-tight">
+                        Accept Secure Payments for Your
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Tutor LMS</span> Courses
+                    </h1>
+                    <p class="text-lg text-zinc-400 leading-relaxed max-w-xl">
+                        Seamlessly integrate SSLCommerz, Bangladesh's leading payment gateway, with Tutor LMS. Enable students to purchase courses using cards, mobile banking, and internet banking.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-lg transition-all shadow-lg shadow-emerald-500/25">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:download" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <path d="m7 10l5 5l5-5"></path>
+                                </g>
+                            </svg>
+                            Download Plugin
+                        </a>
+                        <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 border border-zinc-700 rounded-lg transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:github" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"></path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </g>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-8 pt-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-semibold text-white">7+</div>
+                            <div class="text-xs text-zinc-500">Currencies</div>
+                        </div>
+                        <div class="w-px h-10 bg-zinc-800"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-semibold text-white">100%</div>
+                            <div class="text-xs text-zinc-500">Secure</div>
+                        </div>
+                        <div class="w-px h-10 bg-zinc-800"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-semibold text-emerald-400">Free</div>
+                            <div class="text-xs text-zinc-500">Open Source</div>
+                        </div>
+                        <div class="w-px h-10 bg-zinc-800"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-semibold text-white">GPLv2</div>
+                            <div class="text-xs text-zinc-500">License</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl blur-2xl"></div>
+                    <div class="relative bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 rounded-2xl p-6 shadow-2xl">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:graduation-cap" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0zM22 10v6"></path>
+                                            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium text-white">Course Purchase</div>
+                                    <div class="text-xs text-zinc-500">Secure checkout</div>
+                                </div>
+                            </div>
+                            <span class="px-2 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 rounded-md">Live</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-3 mb-6">
+                            <div class="flex flex-col items-center p-3 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-emerald-500/50 transition-colors cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="24" style="stroke-width: 1.5" class="iconify text-zinc-300 mb-2 iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                        <path d="M2 10h20"></path>
+                                    </g>
+                                </svg>
+                                <span class="text-xs text-zinc-400">Cards</span>
+                            </div>
+                            <div class="flex flex-col items-center p-3 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-emerald-500/50 transition-colors cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:smartphone" data-width="24" style="stroke-width: 1.5" class="iconify text-zinc-300 mb-2 iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                                        <path d="M12 18h.01"></path>
+                                    </g>
+                                </svg>
+                                <span class="text-xs text-zinc-400">bKash</span>
+                            </div>
+                            <div class="flex flex-col items-center p-3 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-emerald-500/50 transition-colors cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:wallet" data-width="24" style="stroke-width: 1.5" class="iconify text-zinc-300 mb-2 iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path>
+                                        <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path>
+                                    </g>
+                                </svg>
+                                <span class="text-xs text-zinc-400">Nagad</span>
+                            </div>
+                            <div class="flex flex-col items-center p-3 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-emerald-500/50 transition-colors cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:landmark" data-width="24" style="stroke-width: 1.5" class="iconify text-zinc-300 mb-2 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 18v-7m1.12-8.802a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949zM14 18v-7m4 7v-7M3 22h18M6 18v-7"></path>
+                                </svg>
+                                <span class="text-xs text-zinc-400">Banking</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" style="stroke-width: 2" class="iconify text-white iconify--lucide">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm font-medium text-emerald-400">Payment Successful</span>
+                            </div>
+                            <span class="text-sm font-semibold text-white">৳1,600</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 lg:py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Features</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Everything You Need for Secure Payments</h2>
+                <p class="text-zinc-400">Powerful features designed specifically for Tutor LMS course sales</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:gift" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2m-4-3V5a2 2 0 1 0-4 0v1m4 0a2 2 0 1 0-4 0"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">Tutor Free & Pro Compatible</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">TSPay works seamlessly with both Tutor LMS Free and Pro versions, giving you flexibility to choose your preferred edition.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:banknote" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect width="20" height="12" x="2" y="6" rx="2"></rect>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M6 12h.01M18 12h.01"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">One-Time Payments</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Enable seamless one-time course purchases with instant payment processing and automatic course access upon successful payment.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:globe" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20a14.5 14.5 0 0 0 0-20M2 12h20"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">Multi-Currency Support</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Accept payments in BDT, USD, EUR, GBP, SGD, INR, and MYR with automatic currency conversion to BDT at current exchange rates.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:shield-check" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                                <path d="m9 12l2 2l4-4"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">Secure Hash Validation</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Bank-grade security with hash verification, transaction validation, and comprehensive input sanitization to prevent XSS attacks.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:zap" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">IPN Integration</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Instant Payment Notification automatically updates order status and grants course access upon successful payment verification.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:toggle-left" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="9" cy="12" r="3"></circle>
+                                <rect width="20" height="14" x="2" y="5" rx="7"></rect>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">Sandbox &amp; Live Modes</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Test thoroughly in sandbox environment before going live. Switch between modes with a single setting in Tutor LMS.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:layers" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path>
+                                <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path>
+                                <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">All Payment Methods</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Support for credit/debit cards, mobile banking (bKash, Nagad, Rocket), and internet banking options available in Bangladesh.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:languages" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 8l6 6m-7 0l6-6l2-3M2 5h12M7 2h1m14 20l-5-10l-5 10m2-4h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">i18n Ready</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Full internationalization support with translation-ready strings. Text domain: <code class="px-1 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">tspay</code></p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:lock" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">WordPress HTTP API</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Uses WordPress native HTTP API instead of cURL for better compatibility and secure external communications.</p>
+                </div>
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:check-circle" data-width="24" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11l3 3L22 4"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">Amount Verification</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Ensures paid amount matches order amount to prevent tampering and fraudulent transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Flow Section -->
+    <section id="payment-flow" class="py-20 lg:py-32 bg-zinc-900/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Payment Flow</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">How Payments Work</h2>
+                <p class="text-zinc-400">Understanding the complete transaction lifecycle</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Vertical line -->
+                    <div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-emerald-500/50 to-transparent hidden md:block"></div>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:mouse-pointer-click" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 4.1L12 6M5.1 8l-2.9-.8M6 12l-1.9 2M7.2 2.2L8 5.1m1.037 4.59a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                                <h3 class="text-base font-medium mb-1">Student Clicks "Purchase"</h3>
+                                <p class="text-sm text-zinc-400">Student selects a course and initiates the checkout process from your Tutor LMS site.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/80 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:send" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11zm7.318-19.539l-10.94 10.939"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                                <h3 class="text-base font-medium mb-1">Payment Request Sent</h3>
+                                <p class="text-sm text-zinc-400">Plugin sends payment request to SSLCommerz API endpoint: <code class="px-1 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">/gwprocess/v4/api.php</code></p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/60 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:external-link" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                                <h3 class="text-base font-medium mb-1">Redirect to SSLCommerz</h3>
+                                <p class="text-sm text-zinc-400">Student is redirected to the secure SSLCommerz payment page to complete the transaction.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/50 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                        <path d="M2 10h20"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                                <h3 class="text-base font-medium mb-1">Student Completes Payment</h3>
+                                <p class="text-sm text-zinc-400">Student selects preferred payment method and completes the payment on SSLCommerz's secure page.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/40 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:bell" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.268 21a2 2 0 0 0 3.464 0m-10.47-5.674A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                                <h3 class="text-base font-medium mb-1">IPN Notification Received</h3>
+                                <p class="text-sm text-zinc-400">SSLCommerz sends Instant Payment Notification (IPN) to your configured webhook URL.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/30 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:shield-check" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                                        <path d="m9 12l2 2l4-4"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                                <h3 class="text-base font-medium mb-1">Transaction Validation</h3>
+                                <p class="text-sm text-zinc-400">Plugin validates transaction via SSLCommerz API: <code class="px-1 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">/validator/api/validationserverAPI.php</code></p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:refresh-cw" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                                        <path d="M21 3v5h-5m5 4a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                                        <path d="M8 16H3v5"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                                <h3 class="text-base font-medium mb-1">Order Status Updated</h3>
+                                <p class="text-sm text-zinc-400">Order status is updated to Success, Failed, or Cancelled based on payment verification result.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:graduation-cap" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0zM22 10v6"></path>
+                                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-5 bg-emerald-500/10 border border-emerald-500/30 rounded-xl">
+                                <h3 class="text-base font-medium mb-1 text-emerald-400">Course Access Granted</h3>
+                                <p class="text-sm text-zinc-400">Student automatically gets access to the purchased course upon successful payment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currencies Section -->
+    <section class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Global Reach</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Supported Currencies</h2>
+                <p class="text-zinc-400">Accept payments from students worldwide with automatic BDT conversion</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="p-4 bg-zinc-900/50 border border-emerald-500/30 rounded-xl text-center relative">
+                    <span class="absolute -top-2 -right-2 px-2 py-0.5 text-xs font-medium text-emerald-400 bg-emerald-500/20 rounded-full">Primary</span>
+                    <span class="text-2xl mb-2 block">🇧🇩</span>
+                    <div class="text-sm font-semibold">BDT</div>
+                    <div class="text-xs text-zinc-500">Bangladeshi Taka</div>
+                </div>
+                <div class="p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center hover:border-zinc-700 transition-colors">
+                    <span class="text-2xl mb-2 block">🇺🇸</span>
+                    <div class="text-sm font-semibold">USD</div>
+                    <div class="text-xs text-zinc-500">US Dollar</div>
+                </div>
+                <div class="p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center hover:border-zinc-700 transition-colors">
+                    <span class="text-2xl mb-2 block">🇪🇺</span>
+                    <div class="text-sm font-semibold">EUR</div>
+                    <div class="text-xs text-zinc-500">Euro</div>
+                </div>
+                <div class="p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center hover:border-zinc-700 transition-colors">
+                    <span class="text-2xl mb-2 block">🇬🇧</span>
+                    <div class="text-sm font-semibold">GBP</div>
+                    <div class="text-xs text-zinc-500">British Pound</div>
+                </div>
+                <div class="p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center hover:border-zinc-700 transition-colors">
+                    <span class="text-2xl mb-2 block">🇸🇬</span>
+                    <div class="text-sm font-semibold">SGD</div>
+                    <div class="text-xs text-zinc-500">Singapore Dollar</div>
+                </div>
+                <div class="p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center hover:border-zinc-700 transition-colors">
+                    <span class="text-2xl mb-2 block">🇮🇳</span>
+                    <div class="text-sm font-semibold">INR</div>
+                    <div class="text-xs text-zinc-500">Indian Rupee</div>
+                </div>
+                <div class="p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center hover:border-zinc-700 transition-colors">
+                    <span class="text-2xl mb-2 block">🇲🇾</span>
+                    <div class="text-sm font-semibold">MYR</div>
+                    <div class="text-xs text-zinc-500">Malaysian Ringgit</div>
+                </div>
+            </div>
+            <p class="text-center text-sm text-zinc-500 mt-6">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:info" data-width="14" style="stroke-width: 1.5" class="iconify inline-block align-middle mr-1 iconify--lucide">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4m0-4h.01"></path>
+                    </g>
+                </svg>
+                Non-BDT currencies are automatically converted to BDT at current exchange rates by SSLCommerz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="py-20 lg:py-32 bg-zinc-900/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Setup Guide</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Installation &amp; Configuration</h2>
+                <p class="text-zinc-400">Get started in minutes with our comprehensive setup guide</p>
+            </div>
+
+            <!-- Requirements -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <div class="flex items-center gap-2 px-5 py-3 bg-zinc-800/50 border-b border-zinc-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:clipboard-check" data-width="18" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                <path d="m9 14l2 2l4-4"></path>
+                            </g>
+                        </svg>
+                        <span class="text-sm font-medium">Minimum Requirements</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="flex items-center gap-3 p-3 bg-zinc-800/30 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:check" data-width="18" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                                <div>
+                                    <div class="text-sm font-medium">WordPress</div>
+                                    <div class="text-xs text-zinc-500">5.3 or higher</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-zinc-800/30 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:check" data-width="18" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                                <div>
+                                    <div class="text-sm font-medium">PHP</div>
+                                    <div class="text-xs text-zinc-500">7.4 or higher</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-zinc-800/30 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:check" data-width="18" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                                <div>
+                                    <div class="text-sm font-medium">Tutor LMS</div>
+                                    <div class="text-xs text-zinc-500">Free version</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-zinc-800/30 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:check" data-width="18" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                                <div>
+                                    <div class="text-sm font-medium">SSLCommerz</div>
+                                    <div class="text-xs text-zinc-500">Merchant Account</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Steps -->
+            <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Left Column: Plugin Installation -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-medium flex items-center gap-2">
+                        <span class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:package" data-width="16" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73zm1 .27V12"></path>
+                                    <path d="M3.29 7L12 12l8.71-5M7.5 4.27l9 5.15"></path>
+                                </g>
+                            </svg>
+                        </span>
+                        Plugin Installation
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">01</div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Download &amp; Upload</h4>
+                                <p class="text-sm text-zinc-400">Download the plugin and upload it to <code class="px-1.5 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">/wp-content/plugins/</code></p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">02</div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Activate Plugin</h4>
+                                <p class="text-sm text-zinc-400">Go to WordPress admin → Plugins and activate TS Pay</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">03</div>
+                            <div class="">
+                                <h4 class="text-sm font-medium mb-1">Ensure Tutor LMS Active</h4>
+                                <p class="text-sm text-zinc-400">Make sure Tutor LMS is installed and activated</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">04</div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Configure Settings</h4>
+                                <p class="text-sm text-zinc-400">Navigate to Tutor LMS → Settings → Payments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: SSLCommerz Configuration -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-medium flex items-center gap-2">
+                        <span class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:settings" data-width="16" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0a2.34 2.34 0 0 0 3.319 1.915a2.34 2.34 0 0 1 2.33 4.033a2.34 2.34 0 0 0 0 3.831a2.34 2.34 0 0 1-2.33 4.033a2.34 2.34 0 0 0-3.319 1.915a2.34 2.34 0 0 1-4.659 0a2.34 2.34 0 0 0-3.32-1.915a2.34 2.34 0 0 1-2.33-4.033a2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </g>
+                            </svg>
+                        </span>
+                        SSLCommerz Configuration
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">01</div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Get Credentials</h4>
+                                <p class="text-sm text-zinc-400">
+                                    <span class="text-zinc-300">Sandbox:</span> Register at <a href="https://developer.sslcommerz.com/registration/" target="_blank" class="text-emerald-400 hover:underline">developer.sslcommerz.com</a>
+                                    <span class="text-zinc-300">Live:</span> Apply at <a href="https://sslcommerz.com/" target="_blank" class="text-emerald-400 hover:underline">sslcommerz.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">02</div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Enter Store Details</h4>
+                                <p class="text-sm text-zinc-400">Configure Environment, Store ID, and Store Password in Tutor LMS payment settings</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">03</div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Copy IPN URL</h4>
+                                <p class="text-sm text-zinc-400">Copy the IPN URL displayed in plugin settings</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="text-2xl font-light text-emerald-500/50">04</div>
+                            <div>
+                                <h4 class="text-sm font-medium mb-1">Configure IPN in SSLCommerz</h4>
+                                <p class="text-sm text-zinc-400">Login to SSLCommerz merchant panel and add the IPN URL in IPN Settings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots -->
+            <div class="max-w-6xl mx-auto mt-12">
+                <h3 class="text-lg font-medium mb-6 text-center">Configuration Screenshots</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                        <div class="px-4 py-3 bg-zinc-800/50 border-b border-zinc-800">
+                            <span class="text-sm text-zinc-400">Tutor LMS Settings</span>
+                        </div>
+                        <div class="p-4">
+                            <img src="https://h1.lwhh.org/sslcommerz/image-1x.jpg" alt="SSLCommerz Configuration in Tutor LMS" class="w-full rounded-lg border border-zinc-700">
+                        </div>
+                    </div>
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                        <div class="px-4 py-3 bg-zinc-800/50 border-b border-zinc-800">
+                            <span class="text-sm text-zinc-400">SSLCommerz Merchant Panel</span>
+                        </div>
+                        <div class="p-4">
+                            <img src="https://h1.lwhh.org/sslcommerz/image-2.jpg" alt="SSLCommerz IPN Configuration" class="w-full rounded-lg border border-zinc-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Section -->
+    <section id="testing" class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Testing</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Test Before Going Live</h2>
+                <p class="text-zinc-400">Use sandbox environment to thoroughly test your integration</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Test Card Info -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <div class="flex items-center gap-2 px-5 py-3 bg-zinc-800/50 border-b border-zinc-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="18" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                <path d="M2 10h20"></path>
+                            </g>
+                        </svg>
+                        <span class="text-sm font-medium">Test Card Details</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="p-4 bg-gradient-to-r from-zinc-800 to-zinc-800/50 rounded-xl border border-zinc-700">
+                            <div class="flex justify-between items-start mb-8">
+                                <div class="text-xs text-zinc-500">Test Card</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="24" style="stroke-width: 1.5" class="iconify text-zinc-400 iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                        <path d="M2 10h20"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="font-mono text-lg tracking-wider mb-4 text-zinc-200">4111 1111 1111 1111</div>
+                            <div class="flex justify-between text-xs text-zinc-500">
+                                <span>Any future expiry date</span>
+                                <span>Any CVV</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:alert-triangle" data-width="16" style="stroke-width: 1.5" class="iconify text-amber-400 flex-shrink-0 mt-0.5 iconify--lucide">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3M12 9v4m0 4h.01"></path>
+                            </svg>
+                            <p class="text-xs text-amber-200/80">Sandbox credentials won't work in Live mode. Always use the correct environment credentials.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Flow -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <div class="flex items-center gap-2 px-5 py-3 bg-zinc-800/50 border-b border-zinc-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:list-checks" data-width="18" style="stroke-width: 1.5" class="iconify text-emerald-400 iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5h8m-8 7h8m-8 7h8M3 17l2 2l4-4M3 7l2 2l4-4"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Test Transaction Flow</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xs font-medium text-emerald-400">1</span>
+                            </div>
+                            <span class="text-sm text-zinc-300">Set environment to "Sandbox"</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xs font-medium text-emerald-400">2</span>
+                            </div>
+                            <span class="text-sm text-zinc-300">Create a test course with a price</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xs font-medium text-emerald-400">3</span>
+                            </div>
+                            <span class="text-sm text-zinc-300">Add course to cart and checkout</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xs font-medium text-emerald-400">4</span>
+                            </div>
+                            <span class="text-sm text-zinc-300">Select SSLCommerz as payment method</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xs font-medium text-emerald-400">5</span>
+                            </div>
+                            <span class="text-sm text-zinc-300">Complete payment on SSLCommerz page</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-xs font-medium text-emerald-400">6</span>
+                            </div>
+                            <span class="text-sm text-zinc-300">Verify order status in Tutor LMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="py-20 lg:py-32 bg-zinc-900/30 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-teal-500/5"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full">Security First</span>
+                    <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight">Professional-Grade Security</h2>
+                    <p class="text-zinc-400">Your transactions are protected with multiple layers of security verification</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:check" data-width="14" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-zinc-200 font-medium">Hash Verification</span>
+                                <p class="text-sm text-zinc-500">Validates SSLCommerz callback signatures to ensure authenticity</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:check" data-width="14" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-zinc-200 font-medium">Transaction Validation</span>
+                                <p class="text-sm text-zinc-500">Double-checks payment status with SSLCommerz API</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:check" data-width="14" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-zinc-200 font-medium">Amount Verification</span>
+                                <p class="text-sm text-zinc-500">Ensures paid amount matches order amount to prevent tampering</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:check" data-width="14" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-zinc-200 font-medium">SSL Communication</span>
+                                <p class="text-sm text-zinc-500">All API calls use HTTPS for encrypted data transfer</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:check" data-width="14" style="stroke-width: 2" class="iconify text-emerald-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-sm text-zinc-200 font-medium">Input Sanitization</span>
+                                <p class="text-sm text-zinc-500">Comprehensive XSS attack prevention with proper data validation</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"></div>
+                        <div class="relative w-48 h-48 lg:w-64 lg:h-64 bg-zinc-900/80 border border-zinc-800 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="96" height="96" viewBox="0 0 24 24" data-icon="lucide:shield-check" data-width="96" style="stroke-width: 1" class="iconify text-emerald-400 iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                                    <path d="m9 12l2 2l4-4"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting Section -->
+    <section id="troubleshooting" class="py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Help</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Troubleshooting Guide</h2>
+                <p class="text-zinc-400">Solutions to common issues you might encounter</p>
+            </div>
+            <div class="grid lg:grid-cols-12 gap-6">
+                <!-- Left Panel - Issue List -->
+                <div class="lg:col-span-4">
+                    <div class="space-y-3">
+                        <button class="troubleshoot-tab w-full text-left p-4 bg-emerald-500/20 border border-emerald-500/30 rounded-xl transition-all hover:border-emerald-500/50 group active" data-tab="payment-processing">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:x-circle" data-width="20" style="stroke-width: 1.5" class="iconify text-red-400 iconify--lucide">
+                                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <path d="m15 9l-6 6m0-6l6 6"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-sm font-medium text-white">Payment Not Processing</h3>
+                                    <p class="text-xs text-zinc-400 mt-0.5">Payments failing or not going through</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:chevron-right" data-width="18" style="stroke-width: 1.5" class="iconify text-zinc-500 flex-shrink-0 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="troubleshoot-tab w-full text-left p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all hover:border-zinc-700 group" data-tab="validation-failed">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:alert-triangle" data-width="20" style="stroke-width: 1.5" class="iconify text-amber-400 iconify--lucide">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3M12 9v4m0 4h.01"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-sm font-medium text-white">Validation Failed</h3>
+                                    <p class="text-xs text-zinc-400 mt-0.5">Transaction validation errors</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:chevron-right" data-width="18" style="stroke-width: 1.5" class="iconify text-zinc-500 flex-shrink-0 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="troubleshoot-tab w-full text-left p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all hover:border-zinc-700 group" data-tab="status-not-updating">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:refresh-cw" data-width="20" style="stroke-width: 1.5" class="iconify text-blue-400 iconify--lucide">
+                                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                            <path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                                            <path d="M21 3v5h-5m5 4a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                                            <path d="M8 16H3v5"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-sm font-medium text-white">Status Not Updating</h3>
+                                    <p class="text-xs text-zinc-400 mt-0.5">Order status not reflecting changes</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:chevron-right" data-width="18" style="stroke-width: 1.5" class="iconify text-zinc-500 flex-shrink-0 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Panel - Details -->
+                <div class="lg:col-span-8">
+                    <!-- Payment Processing -->
+                    <div class="troubleshoot-content block p-8 bg-gradient-to-br from-zinc-900/50 to-zinc-900/30 border border-zinc-800 rounded-2xl" id="payment-processing">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:x-circle" data-width="24" style="stroke-width: 1.5" class="iconify text-red-400 iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="m15 9l-6 6m0-6l6 6"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-white">Payment Not Processing</h3>
+                                <p class="text-sm text-zinc-400 mt-1">Your payments are failing or not going through to SSLCommerz</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-emerald-400">1</span>
+                                    Check Store ID and Password
+                                </h4>
+                                <p class="text-sm text-zinc-400">Verify that your SSLCommerz Store ID and Password are entered correctly in Tutor LMS settings. Even a single character difference will cause payment failures.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-emerald-400">2</span>
+                                    Ensure Environment Matches
+                                </h4>
+                                <p class="text-sm text-zinc-400">Your plugin environment (Sandbox or Live) must match your credentials. Using sandbox credentials in live mode or vice versa will cause authentication failures.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-emerald-400">3</span>
+                                    Verify IPN URL Configuration
+                                </h4>
+                                <p class="text-sm text-zinc-400">Ensure your Instant Payment Notification (IPN) URL is correctly configured in SSLCommerz merchant panel. Without this, payments won't be verified.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-emerald-400">4</span>
+                                    Check SSL Certificate
+                                </h4>
+                                <p class="text-sm text-zinc-400">Ensure your website has a valid SSL certificate (HTTPS). SSLCommerz requires secure connections for all communication.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Validation Failed -->
+                    <div class="troubleshoot-content hidden p-8 bg-gradient-to-br from-zinc-900/50 to-zinc-900/30 border border-zinc-800 rounded-2xl" id="validation-failed">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:alert-triangle" data-width="24" style="stroke-width: 1.5" class="iconify text-amber-400 iconify--lucide">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3M12 9v4m0 4h.01"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-white">Validation Failed</h3>
+                                <p class="text-sm text-zinc-400 mt-1">Transaction validation errors are preventing payment processing</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-amber-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-amber-400">1</span>
+                                    Check IPN URL Accessibility
+                                </h4>
+                                <p class="text-sm text-zinc-400">Verify that your IPN URL is publicly accessible. Use an online tool to check if the URL responds correctly from SSLCommerz servers.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-amber-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-amber-400">2</span>
+                                    Verify Webhook URL in Settings
+                                </h4>
+                                <p class="text-sm text-zinc-400">Double-check that the webhook_url parameter in Tutor LMS settings points to your correct IPN endpoint.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-amber-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-amber-400">3</span>
+                                    Enable WP_DEBUG
+                                </h4>
+                                <p class="text-sm text-zinc-400">Enable WP_DEBUG in your wp-config.php file to get detailed error messages that will help identify the exact validation issue.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-amber-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-amber-400">4</span>
+                                    Check Error Logs
+                                </h4>
+                                <p class="text-sm text-zinc-400">Check your WordPress error logs and server logs for detailed error messages related to the validation failure.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status Not Updating -->
+                    <div class="troubleshoot-content hidden p-8 bg-gradient-to-br from-zinc-900/50 to-zinc-900/30 border border-zinc-800 rounded-2xl" id="status-not-updating">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:refresh-cw" data-width="24" style="stroke-width: 1.5" class="iconify text-blue-400 iconify--lucide">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                                        <path d="M21 3v5h-5m5 4a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                                        <path d="M8 16H3v5"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-white">Status Not Updating</h3>
+                                <p class="text-sm text-zinc-400 mt-1">Order status is not being updated after successful payment</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-blue-400">1</span>
+                                    Verify IPN Configuration
+                                </h4>
+                                <p class="text-sm text-zinc-400">Confirm that IPN is properly enabled and configured in your SSLCommerz merchant account with the correct callback URL.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-blue-400">2</span>
+                                    Check Order ID Parameter
+                                </h4>
+                                <p class="text-sm text-zinc-400">Ensure the order ID is being correctly passed in the value_a parameter during checkout to properly identify which order is being paid.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-blue-400">3</span>
+                                    Ensure Hash Verification Works
+                                </h4>
+                                <p class="text-sm text-zinc-400">Hash verification must pass for the IPN to be processed. Check that your Store Password is correct and being used for hash generation.</p>
+                            </div>
+                            <div class="p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-lg">
+                                <h4 class="font-medium text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-xs font-semibold text-blue-400">4</span>
+                                    Check Webhook Response
+                                </h4>
+                                <p class="text-sm text-zinc-400">Test the webhook manually and check the browser console or server logs to see what response is being sent back to SSLCommerz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Known Limitations -->
+    <!-- <section class="py-20 lg:py-32 bg-zinc-900/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded-full mb-4">Limitations</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Known Limitations</h2>
+                <p class="text-zinc-400">Things to be aware of before implementing</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="p-6 bg-zinc-900/50 border border-amber-500/20 rounded-2xl">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:repeat" data-width="24" style="stroke-width: 1.5" class="iconify text-amber-400 iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m17 2l4 4l-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4l4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></g></svg>
+                    </div>
+                    <h3 class="text-base font-medium mb-2">No Subscription Support</h3>
+                    <p class="text-sm text-zinc-400">SSLCommerz doesn't provide native recurring payment functionality. Only one-time payments are supported.</p>
+                </div>
+                <div class="p-6 bg-zinc-900/50 border border-amber-500/20 rounded-2xl">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:arrow-right-left" data-width="24" style="stroke-width: 1.5" class="iconify text-amber-400 iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 3l4 4l-4 4m4-4H4m4 14l-4-4l4-4m-4 4h16"></path></svg>
+                    </div>
+                    <h3 class="text-base font-medium mb-2">Currency Conversion</h3>
+                    <p class="text-sm text-zinc-400">Non-BDT transactions are automatically converted to BDT by SSLCommerz at current exchange rates.</p>
+                </div>
+                <div class="p-6 bg-zinc-900/50 border border-amber-500/20 rounded-2xl">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:undo-2" data-width="24" style="stroke-width: 1.5" class="iconify text-amber-400 iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></g></svg>
+                    </div>
+                    <h3 class="text-base font-medium mb-2">Manual Refunds</h3>
+                    <p class="text-sm text-zinc-400">Refunds must be processed manually through the SSLCommerz merchant panel. No automatic refund support.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Changelog Section -->
+    <section id="changelog" class="py-20 lg:py-32">
+        <div class="lg:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Updates</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Changelog</h2>
+                <p class="text-zinc-400">Track all the improvements and fixes</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="relative pl-8 border-l-2 border-emerald-500">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:star" data-width="12" style="stroke-width: 2" class="iconify text-white iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-lg font-semibold">Version 1.1.0</span>
+                            <span class="px-2 py-0.5 text-xs font-medium text-emerald-400 bg-emerald-500/20 rounded-full">Latest</span>
+                            <span class="text-xs text-zinc-500">December 25, 2025</span>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-purple-400 bg-purple-500/20 rounded">Renamed</span>
+                                <span class="text-zinc-400">Plugin renamed to TSPay (Tutor SSLCommerz Pay) to comply with WordPress trademark guidelines</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded">Improved</span>
+                                <span class="text-zinc-400">Code cleanup and optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative pl-8 border-l-2 border-emerald-500">
+                    <div class="absolute -left-2.5 top-0 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:star" data-width="12" style="stroke-width: 2" class="iconify text-white iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-lg font-semibold">Version 1.0.7</span>
+                            <span class="text-xs text-zinc-500">October 28, 2025</span>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-red-400 bg-red-500/20 rounded">Security</span>
+                                <span class="text-zinc-400">Added comprehensive input sanitization to prevent XSS attacks</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-red-400 bg-red-500/20 rounded">Security</span>
+                                <span class="text-zinc-400">Implemented proper data validation for all user inputs</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-red-400 bg-red-500/20 rounded">Security</span>
+                                <span class="text-zinc-400">Enhanced hash verification with sanitized inputs</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded">Improved</span>
+                                <span class="text-zinc-400">Enhanced error handling and logging</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded">Improved</span>
+                                <span class="text-zinc-400">Code organization and structure improvements</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative pl-8 border-l-2 border-zinc-700">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-zinc-700 rounded-full"></div>
+                    <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-lg font-semibold">Version 1.0.6</span>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-emerald-400 bg-emerald-500/20 rounded">Feature</span>
+                                <span class="text-zinc-400">Added complete internationalization (i18n) support</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded">Improved</span>
+                                <span class="text-zinc-400">Updated plugin constants and code structure</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded">Improved</span>
+                                <span class="text-zinc-400">Enhanced documentation with translation information</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative pl-8 border-l-2 border-zinc-700">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-zinc-700 rounded-full"></div>
+                    <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-lg font-semibold">Version 1.0.3</span>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded">Improved</span>
+                                <span class="text-zinc-400">Replaced cURL with WordPress HTTP API for better compatibility</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-blue-400 bg-blue-500/20 rounded">Improved</span>
+                                <span class="text-zinc-400">Enhanced error handling and JSON validation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative pl-8 border-l-2 border-zinc-700">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-zinc-700 rounded-full"></div>
+                    <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="text-lg font-semibold">Version 1.0.0</span>
+                        </div>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-purple-400 bg-purple-500/20 rounded">Initial</span>
+                                <span class="text-zinc-400">One-time payment support, Sandbox and Live environments</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-1.5 py-0.5 text-xs font-medium text-purple-400 bg-purple-500/20 rounded">Initial</span>
+                                <span class="text-zinc-400">IPN integration, Multi-currency support, Transaction validation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="lg:py-32 bg-zinc-900/30 pt-20 pb-20" id="faq">
+        <div class="lg:px-8 max-w-4xl mr-auto ml-auto pr-6 pl-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Frequently Asked Questions</h2>
+                <p class="text-zinc-400">Find answers to common questions about TS Pay</p>
+            </div>
+            <div class="space-y-4">
+                <div class="faq-item bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-trigger flex text-left w-full pt-5 pr-5 pb-5 pl-5 items-center justify-between" onclick="toggleFaq(this)">
+                        <span class="text-sm font-medium">Do I need a SSLCommerz account?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:chevron-down" data-width="20" style="stroke-width: 1.5" class="iconify text-zinc-400 transition-transform iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5">
+                        <p class="text-sm text-zinc-400">Yes, you need a merchant account. Sign up at <a href="https://sslcommerz.com/" target="_blank" class="text-emerald-400 hover:underline">sslcommerz.com</a> for live or <a href="https://developer.sslcommerz.com/registration/" target="_blank" class="text-emerald-400 hover:underline">developer.sslcommerz.com</a> for sandbox testing.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-medium">Does this support subscriptions or recurring payments?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:chevron-down" data-width="20" style="stroke-width: 1.5" class="iconify text-zinc-400 transition-transform iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5">
+                        <p class="text-sm text-zinc-400">No, currently only one-time payments are supported. SSLCommerz doesn't provide native recurring payment functionality.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-medium">Can I test before going live?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:chevron-down" data-width="20" style="stroke-width: 1.5" class="iconify text-zinc-400 transition-transform iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5">
+                        <p class="text-sm text-zinc-400">Yes, use the Sandbox environment with test credentials. Test card: <code class="px-1.5 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">4111111111111111</code> with any future expiry and any CVV.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-medium">What payment methods are supported?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:chevron-down" data-width="20" style="stroke-width: 1.5" class="iconify text-zinc-400 transition-transform iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5">
+                        <p class="text-sm text-zinc-400">All SSLCommerz payment methods are supported: Credit/Debit Cards (Visa, Mastercard, Amex), Mobile Banking (bKash, Nagad, Rocket), Internet Banking, and other methods available in Bangladesh.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-medium">Is there a transaction fee?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:chevron-down" data-width="20" style="stroke-width: 1.5" class="iconify text-zinc-400 transition-transform iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5">
+                        <p class="text-sm text-zinc-400">Transaction fees depend on your SSLCommerz merchant agreement. Contact SSLCommerz directly at <a href="mailto:support@sslcommerz.com" class="text-emerald-400 hover:underline">support@sslcommerz.com</a> for pricing details.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-medium">Can I process refunds?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:chevron-down" data-width="20" style="stroke-width: 1.5" class="iconify text-zinc-400 transition-transform iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5">
+                        <p class="text-sm text-zinc-400">Refunds must be processed manually through the SSLCommerz merchant panel. The plugin doesn't handle automatic refunds.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+                        <span class="text-sm font-medium">Is the plugin translation-ready?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:chevron-down" data-width="20" style="stroke-width: 1.5" class="iconify text-zinc-400 transition-transform iconify--lucide">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5">
+                        <p class="text-sm text-zinc-400">Yes! The plugin is fully internationalized (i18n) with text domain <code class="px-1.5 py-0.5 bg-zinc-800 rounded text-xs text-emerald-400">tspay</code>. Contributions for additional language translations are welcome.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Reference Section -->
+
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-32 bg-zinc-900/30 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-transparent to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 relative text-center">
+            <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Ready to Start Accepting Payments?</h2>
+            <p class="text-zinc-400 mb-8 max-w-xl mx-auto">Download TS Pay today and enable secure course payments on your Tutor LMS site. Free, open-source, and GPL licensed.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-xl transition-all shadow-lg shadow-emerald-500/25">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:download" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <path d="m7 10l5 5l5-5"></path>
+                        </g>
+                    </svg>
+                    Download from WordPress
+                </a>
+                <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 border border-zinc-700 rounded-xl transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:github" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"></path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </g>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-zinc-500">
+                <a href="https://developer.sslcommerz.com/documentation/" target="_blank" class="hover:text-zinc-300 transition-colors">SSLCommerz Docs</a>
+                <span class="text-zinc-700">•</span>
+                <a href="https://docs.themeum.com/tutor-lms/" target="_blank" class="hover:text-zinc-300 transition-colors">Tutor LMS Docs</a>
+                <span class="text-zinc-700">•</span>
+                <a href="https://merchant.sslcommerz.com/" target="_blank" class="hover:text-zinc-300 transition-colors">Merchant Panel</a>
+                <span class="text-zinc-700">•</span>
+                <a href="https://developer.sslcommerz.com/" target="_blank" class="hover:text-zinc-300 transition-colors">Developer Portal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-zinc-800 bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Main Footer Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="16" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                    <path d="M2 10h20"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <span class="text-lg font-semibold tracking-tight">TSPay</span>
+                    </div>
+                    <p class="text-sm text-zinc-400 mb-6 leading-relaxed">SSLCommerz payment gateway integration for Tutor LMS. Accept secure online payments for your courses.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors" title="GitHub Repository">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:github" data-width="20" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"></path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://wordpress.org/plugins/tspay" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors" title="WordPress Plugin">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:package" data-width="20" style="stroke-width: 1.5" class="iconify iconify--lucide">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-6">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Features</a></li>
+                        <li><a href="#payment-flow" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">How It Works</a></li>
+                        <li><a href="#installation" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Installation</a></li>
+                        <li><a href="#changelog" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Changelog</a></li>
+                        <li><a href="#faq" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://developer.sslcommerz.com/documentation/" target="_blank" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">SSLCommerz Docs</a></li>
+                        <li><a href="https://docs.themeum.com/tutor-lms/" target="_blank" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Tutor LMS Docs</a></li>
+                        <li><a href="https://merchant.sslcommerz.com/" target="_blank" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Merchant Panel</a></li>
+                        <li><a href="https://developer.sslcommerz.com/" target="_blank" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Developer Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-6">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#troubleshooting" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Troubleshooting</a></li>
+                        <li><a href="https://github.com/hasinhayder/tutor-sslcommerz/issues" target="_blank" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Report Issues</a></li>
+                        <li><a href="https://wordpress.org/support/plugin/tspay/" target="_blank" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Plugin Support</a></li>
+                        <li><a href="mailto:hasin@hasinhayder.com" class="text-sm text-zinc-400 hover:text-emerald-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-zinc-800 my-8"></div>
+
+            <!-- Bottom Footer -->
+            <div class="grid md:grid-cols-2 items-center gap-8">
+                <!-- Left Side - Credits -->
+                <div class="flex flex-col gap-4">
+                    <p class="text-sm text-zinc-400">
+                        TSPay is developed by <a href="https://github.com/hasinhayder" target="_blank" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity w-fit"><span class="text-sm font-medium text-zinc-300 hover:text-emerald-400">Hasin Hayder</span></a> and
+                        <a href="https://happymonster.dev/" target="_blank" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity w-fit">
+                            <span class="text-sm font-medium text-zinc-300 hover:text-emerald-400">Happy Monster</span>
+                        </a>
+                    </p>
+
+                </div>
+
+                <!-- Right Side - Copyright -->
+                <div class="text-sm text-zinc-500 md:text-right">
+                    <p class="mb-2">© 2025 TSPay. All rights reserved.</p>
+                    <p>Released under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors">GPLv2 License</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const faqItem = button.closest('.faq-item');
+            const content = faqItem.querySelector('.faq-content');
+            const icon = button.querySelector('svg');
+
+            // Close all other open accordions
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    const itemContent = item.querySelector('.faq-content');
+                    const itemIcon = item.querySelector('svg');
+                    itemContent.classList.add('hidden');
+                    itemIcon.classList.remove('rotate-180');
+                }
+            });
+
+            // Toggle current accordion
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Troubleshooting tab switching
+        document.querySelectorAll('.troubleshoot-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                const tabId = this.getAttribute('data-tab');
+
+                // Remove active state from all tabs
+                document.querySelectorAll('.troubleshoot-tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.classList.add('bg-zinc-900/50', 'border-zinc-800');
+                    t.classList.remove('bg-emerald-500/20', 'border-emerald-500/30');
+                });
+
+                // Add active state to clicked tab
+                this.classList.add('active');
+                this.classList.remove('bg-zinc-900/50', 'border-zinc-800');
+                this.classList.add('bg-emerald-500/20', 'border-emerald-500/30');
+
+                // Hide all content sections
+                document.querySelectorAll('.troubleshoot-content').forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('block');
+                });
+
+                // Show selected content section
+                const selectedContent = document.getElementById(tabId);
+                if (selectedContent) {
+                    selectedContent.classList.remove('hidden');
+                    selectedContent.classList.add('block');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
