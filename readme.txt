@@ -4,7 +4,7 @@ Tags: tutor-lms, tutor, lms, sslcommerz, payment, bangladesh, e-commerce, gatewa
 Requires at least: 5.3
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.7
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,6 +126,10 @@ Refunds must be processed manually through the SSLCommerz merchant panel. The pl
 
 == Changelog ==
 
+= 1.1.0 =
+* Renamed: Plugin has been renamed to TSPay (Tutor SSLCommerz Pay) due to WordPress guidelines on trademark usage
+* Improvement: Code cleanup and optimization
+
 = 1.0.7 =
 * Security: Added comprehensive input sanitization to prevent XSS attacks
 * Security: Implemented proper data validation for all user inputs
@@ -170,6 +174,9 @@ Minor Fixes
 * Transaction validation
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Plugin renamed to TSPay for compliance with WordPress guidelines. All functionality remains the same.
 
 = 1.0.7 =
 Critical security update with input sanitization and validation improvements. Update immediately for enhanced security.

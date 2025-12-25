@@ -193,6 +193,10 @@ Contributions for additional language translations are welcome!
 
 ## Changelog
 
+### Version 1.1.0 (December 25, 2025)
+- **Renamed**: Plugin has been renamed to TSPay (Tutor SSLCommerz Pay) due to WordPress guidelines on trademark usage
+- **Improvement**: Code cleanup and optimization
+
 ### Version 1.0.7 (October 28, 2025)
 - **Security**: Added comprehensive input sanitization to prevent XSS attacks
 - **Security**: Implemented proper data validation for all user inputs
@@ -202,8 +206,6 @@ Contributions for additional language translations are welcome!
 
 ### Version 1.0.6
 - **Feature**: Added complete internationalization (i18n) support
-- **Feature**: Created translation template (.pot file)
-- **Improvement**: Added languages directory for translation files
 - **Improvement**: Updated plugin constants and code structure
 - **Improvement**: Enhanced documentation with translation information
 
