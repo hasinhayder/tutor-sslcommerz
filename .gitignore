@@ -5,3 +5,4 @@ landing-page
 build.php
 .DS_Store
 .vscode
+svn-push.sh

@@ -4,8 +4,8 @@ $src = __DIR__;
 $dst = __DIR__ . '/tspay';
 
 // Define files and directories to ignore during copy
-$ignoreFiles = ['build.php'];
-$ignoreDirs = ['tspay'];
+$ignoreFiles = ['build.php', 'tspay.zip', 'svn-push.sh'];
+$ignoreDirs = ['tspay', 'landing-page'];
 
 function recurse_copy($src, $dst) {
     global $ignoreFiles, $ignoreDirs;
@@ -39,9 +39,9 @@ function recurse_copy($src, $dst) {
     closedir($dir);
 }
 
-// Clean up existing dist folder if it exists
+// Delete existing tspay folder first if it exists
 if (is_dir($dst)) {
-    echo "Cleaning up existing distribution folder...\n";
+    echo "Deleting existing tspay folder...\n";
     // Using shell command for recursive delete for simplicity and robustness on Mac/Linux
     exec('rm -rf ' . escapeshellarg($dst));
 }
