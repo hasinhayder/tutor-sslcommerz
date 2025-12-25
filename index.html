@@ -136,6 +136,31 @@
             font-family: 'DM Sans', sans-serif !important;
         }
     </style>
+    <style>
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3f3f46;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #52525b;
+        }
+        
+        /* Firefox scrollbar */
+        * {
+            scrollbar-color: #3f3f46 #09090b;
+            scrollbar-width: thin;
+        }
+    </style>
 </head>
 
 <body class="bg-zinc-950 text-zinc-100 font-['Inter'] antialiased">
