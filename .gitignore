@@ -1,7 +1,7 @@
 tspay
 tspay.zip
 landing-page
-svn-build-script.php
+# svn-build-script.php
 build.php
 .DS_Store
 .vscode

@@ -3,6 +3,7 @@
 **Author:** Hasin Hayder  
 **GitHub:** [https://github.com/hasinhayder](https://github.com/hasinhayder)  
 **Plugin Repository:** [https://github.com/hasinhayder/tutor-sslcommerz](https://github.com/hasinhayder/tutor-sslcommerz)
+**Website:** [https://hasinhayder.github.io/tutor-sslcommerz/](https://hasinhayder.github.io/tutor-sslcommerz/)
 
 TS Pay integrates SSLCommerz with Tutor LMS. This plugin enables one-time course payments through SSLCommerz.
 
@@ -18,7 +19,7 @@ TS Pay integrates SSLCommerz with Tutor LMS. This plugin enables one-time course
 - ✅ Internationalization (i18n) support for translations
 - ✅ WordPress HTTP API for secure external communications
 
-## Requirements
+## Minimum Requirements
 
 - WordPress 5.3 or higher
 - PHP 7.4 or higher
