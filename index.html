@@ -137,6 +137,12 @@
         }
     </style>
     <style>
+        /* Prevent horizontal scroll */
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        
         /* Scrollbar styling */
         ::-webkit-scrollbar {
             width: 10px;
@@ -161,9 +167,193 @@
             scrollbar-width: thin;
         }
 
-        /* Page scaling */
-        body {
-            zoom:110%;
+        /* Page scaling - disabled on mobile for better responsiveness */
+        @media (min-width: 768px) {
+            body {
+                zoom: 110%;
+            }
+        }
+
+        /* Responsive improvements */
+        
+        /* Hero stats section - stack on mobile */
+        @media (max-width: 640px) {
+            .hero-stats {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .hero-stats .w-px {
+                display: none;
+            }
+            .hero-stats > div:not(.w-px) {
+                text-align: center;
+                padding: 0.75rem;
+                background: rgba(39, 39, 42, 0.5);
+                border-radius: 0.75rem;
+            }
+        }
+
+        /* Payment flow timeline - adjust for mobile */
+        @media (max-width: 768px) {
+            .payment-flow-step {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .payment-flow-step .flex-1 {
+                width: 100%;
+            }
+        }
+
+        /* Troubleshooting section - stack on mobile */
+        @media (max-width: 1024px) {
+            #troubleshooting .lg\:col-span-4,
+            #troubleshooting .lg\:col-span-8 {
+                grid-column: span 12;
+            }
+        }
+
+        /* Currency grid - 3 columns on tablet, 2 on mobile */
+        @media (max-width: 768px) {
+            .currency-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .currency-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        /* Better text sizing on mobile */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+            h2 {
+                font-size: 1.75rem !important;
+            }
+            .text-lg {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer responsive adjustments */
+        @media (max-width: 768px) {
+            footer .grid {
+                text-align: center;
+            }
+            footer .flex.items-center.gap-4 {
+                justify-content: center;
+            }
+            footer .md\:text-right {
+                text-align: center !important;
+            }
+        }
+
+        /* Navigation improvements */
+        @media (max-width: 1024px) {
+            nav .max-w-7xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        /* Cards and feature boxes - full width on mobile */
+        @media (max-width: 640px) {
+            .feature-card {
+                padding: 1.25rem;
+            }
+        }
+
+        /* Installation steps - stack properly */
+        @media (max-width: 640px) {
+            .installation-step {
+                flex-direction: column;
+                text-align: left;
+            }
+        }
+
+        /* CTA section buttons - stack on mobile */
+        @media (max-width: 480px) {
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .cta-buttons a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Better touch targets on mobile */
+        @media (max-width: 768px) {
+            .faq-trigger {
+                padding: 1.25rem;
+            }
+            nav a, nav button {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        /* Screenshots section */
+        @media (max-width: 768px) {
+            .screenshots-grid img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Overflow prevention and box-sizing */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Ensure all sections stay within viewport */
+        section, nav, footer {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        
+        /* Constrain all containers */
+        .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl {
+            max-width: calc(100vw - 2rem);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 640px) {
+            .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl {
+                max-width: calc(100vw - 3rem);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .max-w-7xl { max-width: 80rem; }
+            .max-w-6xl { max-width: 72rem; }
+            .max-w-5xl { max-width: 64rem; }
+            .max-w-4xl { max-width: 56rem; }
+            .max-w-3xl { max-width: 48rem; }
+            .max-w-2xl { max-width: 42rem; }
+        }
+        
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        /* Hero card responsive */
+        @media (max-width: 640px) {
+            .hero-card .grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -171,8 +361,8 @@
 <body class="bg-zinc-950 text-zinc-100 font-['Inter'] antialiased">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-14 sm:h-16">
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="16" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
@@ -212,7 +402,7 @@
         </div>
         <!-- Mobile Menu -->
         <div class="hidden lg:hidden bg-zinc-900 border-t border-zinc-800" id="mobileMenu">
-            <div class="px-6 py-4 space-y-3">
+            <div class="px-4 sm:px-6 py-4 space-y-3">
                 <a href="#features" class="block text-sm text-zinc-400 hover:text-white py-2">Features</a>
                 <a href="#payment-flow" class="block text-sm text-zinc-400 hover:text-white py-2">How It Works</a>
                 <a href="#installation" class="block text-sm text-zinc-400 hover:text-white py-2">Installation</a>
@@ -227,10 +417,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 lg:pt-40 lg:pb-32 relative overflow-hidden">
-        <div class="bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
-        <div class="-translate-x-1/2 -translate-y-1/2 bg-emerald-500/10 opacity-30 w-[800px] h-[800px] rounded-full absolute top-1/2 left-1/2 blur-3xl"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+    <section class="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-32 relative overflow-hidden">
+        <div class="bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent absolute inset-0"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[800px] h-[90vw] max-h-[800px] bg-emerald-500/10 opacity-30 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <div class="space-y-8">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
@@ -244,8 +434,8 @@
                     <p class="text-lg text-zinc-400 leading-relaxed max-w-xl">
                         Seamlessly integrate SSLCommerz, Bangladesh's leading payment gateway, with Tutor LMS. Enable students to purchase courses using cards, mobile banking, and internet banking.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-lg transition-all shadow-lg shadow-emerald-500/25">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+                        <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-lg transition-all shadow-lg shadow-emerald-500/25 w-full sm:w-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:download" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                     <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -254,7 +444,7 @@
                             </svg>
                             Download Plugin
                         </a>
-                        <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 border border-zinc-700 rounded-lg transition-all">
+                        <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 border border-zinc-700 rounded-lg transition-all w-full sm:w-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:github" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                     <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"></path>
@@ -264,22 +454,22 @@
                             View on GitHub
                         </a>
                     </div>
-                    <div class="flex items-center gap-8 pt-4">
+                    <div class="flex flex-wrap items-center gap-4 sm:gap-8 pt-4 hero-stats">
                         <div class="text-center">
                             <div class="text-2xl font-semibold text-white">7+</div>
                             <div class="text-xs text-zinc-500">Currencies</div>
                         </div>
-                        <div class="w-px h-10 bg-zinc-800"></div>
+                        <div class="w-px h-10 bg-zinc-800 hidden sm:block"></div>
                         <div class="text-center">
                             <div class="text-2xl font-semibold text-white">100%</div>
                             <div class="text-xs text-zinc-500">Secure</div>
                         </div>
-                        <div class="w-px h-10 bg-zinc-800"></div>
+                        <div class="w-px h-10 bg-zinc-800 hidden sm:block"></div>
                         <div class="text-center">
                             <div class="text-2xl font-semibold text-emerald-400">Free</div>
                             <div class="text-xs text-zinc-500">Open Source</div>
                         </div>
-                        <div class="w-px h-10 bg-zinc-800"></div>
+                        <div class="w-px h-10 bg-zinc-800 hidden sm:block"></div>
                         <div class="text-center">
                             <div class="text-2xl font-semibold text-white">GPLv2</div>
                             <div class="text-xs text-zinc-500">License</div>
@@ -306,7 +496,7 @@
                             </div>
                             <span class="px-2 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 rounded-md">Live</span>
                         </div>
-                        <div class="grid grid-cols-4 gap-3 mb-6">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                             <div class="flex flex-col items-center p-3 bg-zinc-800/50 rounded-xl border border-zinc-700/50 hover:border-emerald-500/50 transition-colors cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="24" style="stroke-width: 1.5" class="iconify text-zinc-300 mb-2 iconify--lucide">
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -359,8 +549,8 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 lg:py-32 relative">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="features" class="py-16 sm:py-20 lg:py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Features</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Everything You Need for Bangladeshi Payment Channels</h2>
@@ -483,8 +673,8 @@
     </section>
 
     <!-- Payment Flow Section -->
-    <section id="payment-flow" class="py-20 lg:py-32 bg-zinc-900/30">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="payment-flow" class="py-16 sm:py-20 lg:py-32 bg-zinc-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Payment Flow</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">How Payments Work</h2>
@@ -493,44 +683,44 @@
             <div class="max-w-4xl mx-auto">
                 <div class="relative">
                     <!-- Vertical line -->
-                    <div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-emerald-500/50 to-transparent hidden md:block"></div>
+                    <div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-emerald-500/50 to-transparent hidden sm:block"></div>
 
                     <div class="space-y-6">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:mouse-pointer-click" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 4.1L12 6M5.1 8l-2.9-.8M6 12l-1.9 2M7.2 2.2L8 5.1m1.037 4.59a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1">Student Clicks "Purchase"</h3>
                                 <p class="text-sm text-zinc-400">Student selects a course and initiates the checkout process from your Tutor LMS site.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-500/80 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/80 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:send" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11zm7.318-19.539l-10.94 10.939"></path>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1">Your Site Connects with SSLCommerz</h3>
                                 <p class="text-sm text-zinc-400">Behind the scenes, your site securely communicates with SSLCommerz to initiate the payment process.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-500/60 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/60 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:external-link" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1">Student Enters Payment Details</h3>
                                 <p class="text-sm text-zinc-400">The student is taken to a secure SSLCommerz payment gateway where they choose their preferred payment method and complete the transaction.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-500/50 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/50 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:credit-card" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <rect width="20" height="14" x="2" y="5" rx="2"></rect>
@@ -538,24 +728,24 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1">Student Completes Payment</h3>
                                 <p class="text-sm text-zinc-400">Student selects preferred payment method and completes the payment on SSLCommerz's secure page.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-500/40 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/40 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:bell" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.268 21a2 2 0 0 0 3.464 0m-10.47-5.674A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1">Payment Result Confirmed</h3>
                                 <p class="text-sm text-zinc-400">SSLCommerz instantly notifies your site about the payment result—whether it succeeded, failed, or was cancelled.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-500/30 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/30 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:shield-check" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
@@ -563,13 +753,13 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1">Security Check</h3>
                                 <p class="text-sm text-zinc-400">Our plugin verifies the payment through a secure validation process, ensuring everything is legitimate and safe.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:refresh-cw" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
@@ -578,13 +768,13 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-zinc-900/80 border border-zinc-800 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1">Order Status Updated</h3>
                                 <p class="text-sm text-zinc-400">Order status is updated to Success, Failed, or Cancelled based on payment verification result.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 mx-auto sm:mx-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:graduation-cap" data-width="20" style="stroke-width: 1.5" class="iconify text-white iconify--lucide">
                                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0zM22 10v6"></path>
@@ -592,7 +782,7 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div class="flex-1 p-5 bg-emerald-500/10 border border-emerald-500/30 rounded-xl">
+                            <div class="flex-1 p-4 sm:p-5 bg-emerald-500/10 border border-emerald-500/30 rounded-xl w-full">
                                 <h3 class="text-base font-medium mb-1 text-emerald-400">Course Access Granted</h3>
                                 <p class="text-sm text-zinc-400">Student automatically gets access to the purchased course upon successful payment.</p>
                             </div>
@@ -604,14 +794,14 @@
     </section>
 
     <!-- Currencies Section -->
-    <section class="py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section class="py-16 sm:py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Global Reach</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Supported Currencies</h2>
                 <p class="text-zinc-400">Accept payments from students worldwide with automatic BDT conversion</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
                 <div class="p-4 bg-zinc-900/50 border border-emerald-500/30 rounded-xl text-center relative">
                     <span class="absolute -top-2 -right-2 px-2 py-0.5 text-xs font-medium text-emerald-400 bg-emerald-500/20 rounded-full">Primary</span>
                     <span class="text-2xl mb-2 block">🇧🇩</span>
@@ -662,8 +852,8 @@
     </section>
 
     <!-- Installation Section -->
-    <section id="installation" class="py-20 lg:py-32 bg-zinc-900/30">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="installation" class="py-16 sm:py-20 lg:py-32 bg-zinc-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Setup Guide</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Installation &amp; Configuration</h2>
@@ -848,8 +1038,8 @@
     </section>
 
     <!-- Testing Section -->
-    <section id="testing" class="py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="testing" class="py-16 sm:py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Testing</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Test Before Going Live</h2>
@@ -945,9 +1135,9 @@
     </section>
 
     <!-- Security Section -->
-    <section class="py-20 lg:py-32 bg-zinc-900/30 relative overflow-hidden">
+    <section class="py-16 sm:py-20 lg:py-32 bg-zinc-900/30 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-teal-500/5"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
                     <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full">Security First</span>
@@ -1012,9 +1202,9 @@
                     </ul>
                 </div>
                 <div class="flex items-center justify-center">
-                    <div class="relative">
+                    <div class="relative max-w-full">
                         <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"></div>
-                        <div class="relative w-48 h-48 lg:w-64 lg:h-64 bg-zinc-900/80 border border-zinc-800 rounded-full flex items-center justify-center">
+                        <div class="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-zinc-900/80 border border-zinc-800 rounded-full flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="96" height="96" viewBox="0 0 24 24" data-icon="lucide:shield-check" data-width="96" style="stroke-width: 1" class="iconify text-emerald-400 iconify--lucide">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
@@ -1029,8 +1219,8 @@
     </section>
 
     <!-- Troubleshooting Section -->
-    <section id="troubleshooting" class="py-20 lg:py-32">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <section id="troubleshooting" class="py-16 sm:py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Help</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Troubleshooting Guide</h2>
@@ -1038,7 +1228,7 @@
             </div>
             <div class="grid lg:grid-cols-12 gap-6">
                 <!-- Left Panel - Issue List -->
-                <div class="lg:col-span-4">
+                <div class="lg:col-span-4 col-span-12">
                     <div class="space-y-3">
                         <button class="troubleshoot-tab w-full text-left p-4 bg-emerald-500/20 border border-emerald-500/30 rounded-xl transition-all hover:border-emerald-500/50 group active" data-tab="payment-processing">
                             <div class="flex items-center gap-3">
@@ -1099,7 +1289,7 @@
                 </div>
 
                 <!-- Right Panel - Details -->
-                <div class="lg:col-span-8">
+                <div class="lg:col-span-8 col-span-12">
                     <!-- Payment Processing -->
                     <div class="troubleshoot-content block p-8 bg-gradient-to-br from-zinc-900/50 to-zinc-900/30 border border-zinc-800 rounded-2xl" id="payment-processing">
                         <div class="flex items-start gap-4 mb-6">
@@ -1281,8 +1471,8 @@
     </section> -->
 
     <!-- Changelog Section -->
-    <section id="changelog" class="py-20 lg:py-32">
-        <div class="lg:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+    <section id="changelog" class="py-16 sm:py-20 lg:py-32">
+        <div class="lg:px-8 max-w-7xl mr-auto ml-auto pr-4 pl-4 sm:pr-6 sm:pl-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">Updates</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Changelog</h2>
@@ -1411,8 +1601,8 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="lg:py-32 bg-zinc-900/30 pt-20 pb-20" id="faq">
-        <div class="lg:px-8 max-w-4xl mr-auto ml-auto pr-6 pl-6">
+    <section class="py-16 sm:py-20 lg:py-32 bg-zinc-900/30" id="faq">
+        <div class="lg:px-8 max-w-4xl mr-auto ml-auto pr-4 pl-4 sm:pr-6 sm:pl-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-flex items-center px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-4">FAQ</span>
                 <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Frequently Asked Questions</h2>
@@ -1504,13 +1694,13 @@
 
 
     <!-- CTA Section -->
-    <section class="py-20 lg:py-32 bg-zinc-900/30 relative overflow-hidden">
+    <section class="py-16 sm:py-20 lg:py-32 bg-zinc-900/30 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-transparent to-transparent"></div>
-        <div class="max-w-4xl mx-auto px-6 lg:px-8 relative text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
             <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight mb-4">Ready to Start Accepting Payments?</h2>
             <p class="text-zinc-400 mb-8 max-w-xl mx-auto">Download TS Pay today and enable secure course payments on your Tutor LMS site. Free, open-source, and GPL licensed.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-xl transition-all shadow-lg shadow-emerald-500/25">
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 px-4 sm:px-0">
+                <a href="https://wordpress.org/plugins/tspay" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 text-sm font-medium text-zinc-900 bg-gradient-to-r from-emerald-400 to-teal-400 hover:from-emerald-300 hover:to-teal-300 rounded-xl transition-all shadow-lg shadow-emerald-500/25 w-full sm:w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:download" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -1519,7 +1709,7 @@
                     </svg>
                     Download from WordPress
                 </a>
-                <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 border border-zinc-700 rounded-xl transition-all">
+                <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 text-sm font-medium text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 border border-zinc-700 rounded-xl transition-all w-full sm:w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24" data-icon="lucide:github" data-width="18" style="stroke-width: 1.5" class="iconify iconify--lucide">
                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                             <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"></path>
@@ -1529,23 +1719,23 @@
                     View on GitHub
                 </a>
             </div>
-            <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-zinc-500">
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-6 mt-8 text-sm text-zinc-500 px-4 sm:px-0">
                 <a href="https://developer.sslcommerz.com/documentation/" target="_blank" class="hover:text-zinc-300 transition-colors">SSLCommerz Docs</a>
-                <span class="text-zinc-700">•</span>
+                <span class="text-zinc-700 hidden sm:inline">•</span>
                 <a href="https://docs.themeum.com/tutor-lms/" target="_blank" class="hover:text-zinc-300 transition-colors">Tutor LMS Docs</a>
-                <span class="text-zinc-700">•</span>
+                <span class="text-zinc-700 hidden sm:inline">•</span>
                 <a href="https://merchant.sslcommerz.com/" target="_blank" class="hover:text-zinc-300 transition-colors">Merchant Panel</a>
-                <span class="text-zinc-700">•</span>
+                <span class="text-zinc-700 hidden sm:inline">•</span>
                 <a href="https://developer.sslcommerz.com/" target="_blank" class="hover:text-zinc-300 transition-colors">Developer Portal</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-16 border-t border-zinc-800 bg-zinc-950/50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <footer class="py-12 sm:py-16 border-t border-zinc-800 bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Main Footer Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
                 <!-- Brand Section -->
                 <div class="lg:col-span-1">
                     <div class="flex items-center gap-2 mb-4">
@@ -1560,7 +1750,7 @@
                         <span class="text-lg font-semibold tracking-tight">TSPay</span>
                     </div>
                     <p class="text-sm text-zinc-400 mb-6 leading-relaxed">SSLCommerz payment gateway integration for Tutor LMS. Accept secure online payments for your courses.</p>
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4 justify-center sm:justify-start">
                         <a href="https://github.com/hasinhayder/tutor-sslcommerz" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors" title="GitHub Repository">
                             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:github" data-width="20" style="stroke-width: 1.5" class="iconify iconify--lucide">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -1621,7 +1811,7 @@
             <div class="border-t border-zinc-800 my-8"></div>
 
             <!-- Bottom Footer -->
-            <div class="grid md:grid-cols-2 items-center gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 sm:gap-8 text-center md:text-left">
                 <!-- Left Side - Credits -->
                 <div class="flex flex-col gap-4">
                     <p class="text-sm text-zinc-400">
@@ -1634,7 +1824,7 @@
                 </div>
 
                 <!-- Right Side - Copyright -->
-                <div class="text-sm text-zinc-500 md:text-right">
+                <div class="text-sm text-zinc-500 md:text-right text-center">
                     <p class="mb-2">© 2025 TSPay. All rights reserved.</p>
                     <p>Released under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors">GPLv2 License</a></p>
                 </div>
