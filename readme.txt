@@ -1,6 +1,6 @@
 === TS Pay ===
 Contributors: hasinhayder
-Tags: tutor-lms, tutor, sslcommerz, tutor, bkash 
+Tags: tutor-lms, payments, sslcommerz, tutor, bkash 
 Requires at least: 5.3
 Tested up to: 6.9
 Requires PHP: 7.4
@@ -13,6 +13,8 @@ Seamlessly integrate SSLCommerz with Tutor LMS for secure, multi-currency course
 == Description ==
 
 TS Pay integrates SSLCommerz, Bangladesh's leading payment gateway, with Tutor LMS to enable seamless course purchases. Accept payments from local and international customers using cards, mobile banking, and internet banking.
+
+Website: [https://hasinhayder.github.io/tutor-sslcommerz/](https://hasinhayder.github.io/tutor-sslcommerz/)
 
 = Features =
 
@@ -201,9 +203,10 @@ Fixes payment amount issue. Required for payments to work.
 
 == Support ==
 
+Website: [https://hasinhayder.github.io/tutor-sslcommerz/](https://hasinhayder.github.io/tutor-sslcommerz/)
 For plugin issues: [GitHub Issues](https://github.com/hasinhayder/tutor-sslcommerz/issues)
 For SSLCommerz API: support@sslcommerz.com
-For Tutor LMS: Themeum support
+For Tutor LMS: [Tutor support](https://tutorlms.com/support/)
 
 == Credits ==
 
