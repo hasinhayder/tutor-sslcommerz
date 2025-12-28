@@ -208,8 +208,3 @@ For plugin issues: [GitHub Issues](https://github.com/hasinhayder/tutor-sslcomme
 For SSLCommerz API: support@sslcommerz.com
 For Tutor LMS: [Tutor support](https://tutorlms.com/support/)
 
-== Credits ==
-
-Developed by Hasin Hayder
-Based on Tutor LMS Payment Gateway framework
-SSLCommerz API integration
